@@ -3,52 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hatchling Media | Original Stories for Children & Families</title>
-  <meta name="description" content="Hatchling Media creates original, creator-led intellectual property for children and family audiences. Animation, publishing, licensing, and educational content." />
-  <meta name="keywords" content="children's media, kids entertainment, animation, children's books, family content, IP development, educational content" />
+  <title>Hatchling Media | Original IP for Animation, Licensing & Global Partnerships</title>
+  <meta name="description" content="Hatchling Media is a creator-led studio developing original characters, stories, and universes for animation, licensing, and global partnerships. Founded by Albert Massay." />
+  <meta name="keywords" content="IP development, children's animation, character licensing, original IP, animation studio, children's media, Albert Massay, intellectual property" />
   <meta name="author" content="Hatchling Media" />
-  
+
   <!-- Open Graph -->
-  <meta property="og:title" content="Hatchling Media | Original Stories for Children & Families" />
-  <meta property="og:description" content="We ignite young imaginations through joyful, inclusive stories that inspire curiosity, creativity, and connection." />
+  <meta property="og:title" content="Hatchling Media | Original IP for Animation, Licensing & Global Partnerships" />
+  <meta property="og:description" content="Creating original characters and worlds for global audiences. A creator-led IP development studio." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://hatchlingmedia.com" />
-  
+  <meta property="og:image" content="https://hatchlingmedia.com/Hatchling_Media.png" />
+
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@500;600;700&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --color-primary: #FFD93D;
-      --color-primary-dark: #F5C518;
-      --color-secondary: #6BCB77;
-      --color-accent: #4D96FF;
-      --color-warm: #FF6B6B;
-      --color-ink: #2D3436;
-      --color-ink-light: #4a4a4a;
-      --color-ink-muted: #636e72;
+      --color-ink: #1a1a2e;
+      --color-ink-light: #3a3a5c;
+      --color-ink-muted: #6e6e8a;
       --color-paper: #ffffff;
-      --color-paper-warm: #FFFDF7;
-      --color-paper-soft: #FFF9E6;
-      --font-display: 'Baloo 2', cursive;
-      --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+      --color-paper-warm: #fafaf8;
+      --color-paper-soft: #f4f3f0;
+      --color-accent: #2563eb;
+      --color-accent-dark: #1d4ed8;
+      --color-accent-light: #dbeafe;
+      --color-gold: #d4a017;
+      --color-gold-light: #fef3c7;
+      --color-warm: #dc2626;
+      --color-border: #e5e5e0;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: var(--font-body);
@@ -60,14 +56,14 @@
       flex-direction: column;
     }
 
-    /* Header */
+    /* ─── HEADER ─── */
     header {
-      padding: 16px 40px;
+      padding: 18px 48px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: var(--color-paper);
-      border-bottom: 2px solid var(--color-paper-soft);
+      border-bottom: 1px solid var(--color-border);
       position: sticky;
       top: 0;
       z-index: 100;
@@ -76,36 +72,51 @@
     .logo {
       display: flex;
       align-items: center;
+      gap: 12px;
       text-decoration: none;
     }
 
-    .logo img {
-      height: 50px;
-      width: auto;
+    .logo img { height: 42px; width: auto; }
+
+    .logo-text {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--color-ink);
+      letter-spacing: -0.02em;
     }
 
     nav {
       display: flex;
-      gap: 32px;
+      gap: 36px;
       align-items: center;
     }
 
     nav a {
       font-family: var(--font-body);
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--color-ink);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-ink-light);
       text-decoration: none;
-      transition: color 0.2s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      transition: color 0.2s;
     }
 
-    nav a:hover {
-      color: var(--color-accent);
+    nav a:hover, nav a.active { color: var(--color-accent); }
+
+    nav a.nav-cta {
+      background: var(--color-ink);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-transform: none;
+      letter-spacing: 0;
+      font-size: 14px;
+      transition: background 0.2s;
     }
 
-    nav a.active {
-      color: var(--color-accent);
-    }
+    nav a.nav-cta:hover { background: var(--color-accent); }
 
     .mobile-menu {
       display: none;
@@ -113,239 +124,379 @@
       border: none;
       font-size: 24px;
       cursor: pointer;
+      color: var(--color-ink);
     }
 
-    /* Hero Section */
+    /* ─── HERO ─── */
     .hero {
-      background: linear-gradient(180deg, var(--color-paper-soft) 0%, var(--color-paper) 100%);
-      padding: 60px 40px 80px;
+      padding: 100px 48px 80px;
+      max-width: 960px;
+      margin: 0 auto;
       text-align: center;
     }
 
-    .hero-logo {
-      margin-bottom: 24px;
+    .hero-label {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-accent);
+      background: var(--color-accent-light);
+      padding: 6px 16px;
+      border-radius: 100px;
+      margin-bottom: 28px;
     }
 
-    .hero-logo img {
-      max-width: 180px;
-      height: auto;
-    }
-
-    .hero-tagline {
+    .hero h1 {
       font-family: var(--font-display);
-      font-size: clamp(24px, 4vw, 36px);
-      font-weight: 600;
-      line-height: 1.4;
+      font-size: clamp(36px, 5.5vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
       color: var(--color-ink);
-      max-width: 800px;
-      margin: 0 auto 32px;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
     }
 
-    .hero-tagline em {
-      color: var(--color-warm);
-      font-style: normal;
-    }
-
-    .hero-subtitle {
-      font-size: 18px;
+    .hero-sub {
+      font-size: 19px;
       color: var(--color-ink-light);
-      max-width: 700px;
-      margin: 0 auto;
+      max-width: 680px;
+      margin: 0 auto 44px;
       line-height: 1.8;
     }
 
-    /* Main Content */
-    main {
-      flex: 1;
-    }
-
-    .section {
-      padding: 60px 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-family: var(--font-display);
-      font-size: 28px;
-      font-weight: 700;
-      color: var(--color-ink);
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    .section-title span {
-      color: var(--color-accent);
-    }
-
-    /* Focus Areas */
-    .focus-section {
-      background: var(--color-paper-warm);
-      padding: 60px 40px;
-    }
-
-    .focus-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .focus-card {
-      background: var(--color-paper);
-      padding: 24px;
-      border-radius: 16px;
-      text-align: center;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .focus-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-    }
-
-    .focus-icon {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
-
-    .focus-card h3 {
-      font-family: var(--font-display);
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--color-ink);
-    }
-
-    /* CTA Section */
-    .cta-section {
-      background: linear-gradient(135deg, var(--color-accent) 0%, #6B8DD6 100%);
-      padding: 60px 40px;
-      text-align: center;
-      color: white;
-    }
-
-    .cta-section h2 {
-      font-family: var(--font-display);
-      font-size: 28px;
-      margin-bottom: 16px;
-    }
-
-    .cta-section p {
-      font-size: 17px;
-      margin-bottom: 24px;
-      opacity: 0.95;
-    }
-
-    .cta-button {
-      display: inline-block;
-      background: white;
-      color: var(--color-accent);
-      padding: 14px 32px;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-    }
-
-    /* Footer */
-    footer {
-      background: var(--color-ink);
-      color: white;
-      padding: 40px;
-      text-align: center;
-    }
-
-    .footer-content {
-      max-width: 600px;
-      margin: 0 auto;
-    }
-
-    .footer-logo {
-      font-family: var(--font-display);
-      font-size: 24px;
-      margin-bottom: 16px;
-    }
-
-    .footer-links {
+    .hero-ctas {
       display: flex;
+      gap: 16px;
       justify-content: center;
-      gap: 24px;
-      margin-bottom: 24px;
       flex-wrap: wrap;
     }
 
-    .footer-links a {
-      color: rgba(255,255,255,0.8);
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.2s ease;
-    }
-
-    .footer-links a:hover {
+    .btn-primary {
+      display: inline-block;
+      background: var(--color-ink);
       color: white;
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      transition: all 0.2s;
     }
 
-    .social-links {
+    .btn-primary:hover {
+      background: var(--color-accent);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: var(--color-ink);
+      padding: 16px 32px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+      border: 2px solid var(--color-border);
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-ink);
+      transform: translateY(-1px);
+    }
+
+    /* ─── ABOUT STRIP ─── */
+    .about-strip {
+      background: var(--color-paper-soft);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 64px 48px;
+    }
+
+    .about-strip-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-strip p {
+      font-size: 17px;
+      line-height: 1.9;
+      color: var(--color-ink-light);
+    }
+
+    .about-strip p + p {
+      margin-top: 20px;
+    }
+
+    /* ─── IP SHOWCASE ─── */
+    .ip-showcase {
+      padding: 80px 48px;
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-display);
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+      letter-spacing: -0.01em;
+    }
+
+    .section-header p {
+      font-size: 16px;
+      color: var(--color-ink-muted);
+    }
+
+    .ip-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .ip-card {
+      background: var(--color-paper);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: 36px;
+      transition: all 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ip-card:hover {
+      border-color: var(--color-accent);
+      box-shadow: 0 8px 32px rgba(37, 99, 235, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .ip-card-header {
       display: flex;
-      justify-content: center;
-      gap: 16px;
-      margin-bottom: 24px;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
     }
 
-    .social-links a {
+    .ip-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--color-ink);
+    }
+
+    .status-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 5px 12px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .status-published {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .status-development {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .status-concept {
+      background: #e0e7ff;
+      color: #3730a3;
+    }
+
+    .ip-logline {
+      font-size: 15px;
+      color: var(--color-ink-light);
+      font-style: italic;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
+    .ip-meta {
+      font-size: 13px;
+      color: var(--color-ink-muted);
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .ip-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* ─── CAPABILITIES ─── */
+    .capabilities {
+      background: var(--color-ink);
+      color: white;
+      padding: 80px 48px;
+    }
+
+    .capabilities .section-header h2 { color: white; }
+    .capabilities .section-header p { color: rgba(255,255,255,0.6); }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .cap-item {
+      text-align: center;
+      padding: 32px 20px;
+    }
+
+    .cap-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .cap-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .cap-item p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+    }
+
+    /* ─── PARTNERSHIP CTA ─── */
+    .partnership-cta {
+      padding: 80px 48px;
+      text-align: center;
+      background: var(--color-paper-warm);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .partnership-cta h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 16px;
+    }
+
+    .partnership-cta p {
+      font-size: 17px;
+      color: var(--color-ink-light);
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .inquiry-types {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .inquiry-type {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-ink-muted);
+      background: var(--color-paper);
+      border: 1px solid var(--color-border);
+      padding: 8px 18px;
+      border-radius: 100px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--color-ink);
+      color: white;
+      padding: 48px;
+    }
+
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand {
       display: flex;
       align-items: center;
-      justify-content: center;
-      width: 40px;
-      height: 40px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 50%;
-      color: white;
+      gap: 10px;
+    }
+
+    .footer-brand img { height: 28px; }
+
+    .footer-brand span {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .footer-nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    .footer-nav a {
+      color: rgba(255,255,255,0.65);
       text-decoration: none;
-      font-size: 18px;
-      transition: background 0.2s ease;
-    }
-
-    .social-links a:hover {
-      background: rgba(255,255,255,0.2);
-    }
-
-    .footer-copyright {
       font-size: 13px;
-      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+      transition: color 0.2s;
     }
 
-    /* Animation */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .footer-nav a:hover { color: white; }
+
+    .footer-legal {
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
     }
 
-    .hero-logo, .hero-tagline, .hero-subtitle {
-      animation: fadeInUp 0.6s ease-out both;
+    /* ─── ANIMATIONS ─── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .hero-tagline { animation-delay: 0.1s; }
-    .hero-subtitle { animation-delay: 0.2s; }
+    .hero-label, .hero h1, .hero-sub, .hero-ctas {
+      animation: fadeUp 0.7s ease-out both;
+    }
 
-    /* Responsive */
+    .hero h1 { animation-delay: 0.1s; }
+    .hero-sub { animation-delay: 0.2s; }
+    .hero-ctas { animation-delay: 0.3s; }
+
+    /* ─── RESPONSIVE ─── */
     @media (max-width: 768px) {
-      header {
-        padding: 16px 20px;
-      }
+      header { padding: 16px 20px; }
 
       nav {
         display: none;
@@ -358,111 +509,208 @@
         padding: 20px;
         gap: 16px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        border-bottom: 1px solid var(--color-border);
       }
 
-      nav.open {
-        display: flex;
-      }
+      nav.open { display: flex; }
+      .mobile-menu { display: block; }
 
-      .mobile-menu {
-        display: block;
-      }
-
-      .hero {
-        padding: 40px 20px 60px;
-      }
-
-      .hero-logo img {
-        max-width: 140px;
-      }
-
-      .section {
-        padding: 40px 20px;
-      }
-
-      .focus-section {
-        padding: 40px 20px;
-      }
-
-      .cta-section {
-        padding: 40px 20px;
-      }
-
-      footer {
-        padding: 32px 20px;
-      }
+      .hero { padding: 60px 20px 50px; }
+      .about-strip { padding: 48px 20px; }
+      .ip-showcase { padding: 48px 20px; }
+      .ip-grid { grid-template-columns: 1fr; }
+      .capabilities { padding: 48px 20px; }
+      .cap-grid { grid-template-columns: 1fr; gap: 16px; }
+      .partnership-cta { padding: 48px 20px; }
+      footer { padding: 32px 20px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-nav { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
 <body>
   <header>
     <a href="index.html" class="logo">
-      <img src="Hatchling_Media.png" alt="Hatchling Media logo - a cute yellow chick hatching from an egg, representing new creative ideas being born">
+      <img src="Hatchling_Media.png" alt="Hatchling Media logo">
+      <span class="logo-text">Hatchling Media</span>
     </a>
-    <button class="mobile-menu" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+    <button class="mobile-menu" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
     <nav id="nav" role="navigation" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="projects.html">Projects</a>
-      <a href="/cdn-cgi/l/email-protection#b6d5d9d8c2d7d5c2f6ded7c2d5dedadfd8d1dbd3d2dfd798d5d9db">Contact</a>
+      <a href="portfolio.html">IP Portfolio</a>
+      <a href="slate.html">Development Slate</a>
+      <a href="studio.html">Studio</a>
+      <a href="mailto:hello@hatchlingmedia.com" class="nav-cta">Contact</a>
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
-    <div class="hero-logo">
-      <img src="Hatchling_Media.png" alt="Hatchling Media - an independent children's media company creating original stories and characters for kids and families">
-    </div>
-    <h1 class="hero-tagline">
-      At Hatchling Media, we ignite young imaginations through <em>joyful, inclusive stories</em> that inspire curiosity, creativity, and connection for children and families everywhere.
-    </h1>
-    <p class="hero-subtitle">
-      We're an independent content company focused on the creation and development of original, creator-led intellectual property for children and family audiences.
+    <div class="hero-label">Creator-Led IP Development Studio</div>
+    <h1>Creating Original Characters and Worlds for Global Audiences.</h1>
+    <p class="hero-sub">
+      Hatchling Media is the creative studio of Albert Massay, developing original characters, stories, and universes for animation, licensing, and global partnerships.
     </p>
+    <div class="hero-ctas">
+      <a href="portfolio.html" class="btn-primary">View IP Portfolio</a>
+      <a href="slate.html" class="btn-secondary">Explore Development Slate</a>
+    </div>
   </section>
 
   <main>
-    <section class="focus-section">
-      <h2 class="section-title">What We <span>Do</span></h2>
-      <div class="focus-grid">
-        <div class="focus-card">
-          <div class="focus-icon" role="img" aria-label="Animation">🎬</div>
-          <h3>Animation Development</h3>
+    <!-- ABOUT STRIP -->
+    <section class="about-strip">
+      <div class="about-strip-inner">
+        <p>
+          At Hatchling Media, we develop character-driven worlds designed for modern audiences across streaming, digital platforms, and brand ecosystems. Our focus is building original intellectual property that can grow into animated series, licensing programs, and long-term entertainment franchises.
+        </p>
+        <p>
+          We collaborate with studios, distributors, investors, and brand partners seeking original storytelling and scalable character universes.
+        </p>
+      </div>
+    </section>
+
+    <!-- IP SHOWCASE -->
+    <section class="ip-showcase">
+      <div class="section-header">
+        <h2>Our Intellectual Property</h2>
+        <p>Original worlds and characters in active development and production</p>
+      </div>
+
+      <div class="ip-grid">
+        <div class="ip-card">
+          <div class="ip-card-header">
+            <h3>Speedeet &amp; Wilar</h3>
+            <span class="status-tag status-published">Published &amp; Available</span>
+          </div>
+          <p class="ip-logline">"Two best friends tackle everyday fun and cultural adventures with heart, humor, and resilience."</p>
+          <div class="ip-meta">
+            <span>📚 8 Books Published</span>
+            <span>🎬 Animation-Ready</span>
+            <span>👧 Ages 7–12</span>
+          </div>
         </div>
-        <div class="focus-card">
-          <div class="focus-icon" role="img" aria-label="Books">📚</div>
+
+        <div class="ip-card">
+          <div class="ip-card-header">
+            <h3>The Fix-It Twins</h3>
+            <span class="status-tag status-development">In Development</span>
+          </div>
+          <p class="ip-logline">"Ten-year-old twins discover that fixing things is really about fixing what matters — family, friendship, and community."</p>
+          <div class="ip-meta">
+            <span>📖 Manuscript Complete</span>
+            <span>🔧 STEM + Repair Culture</span>
+            <span>👧 Ages 6–10</span>
+          </div>
+        </div>
+
+        <div class="ip-card">
+          <div class="ip-card-header">
+            <h3>Recipe Rescue Crew</h3>
+            <span class="status-tag status-concept">In Development</span>
+          </div>
+          <p class="ip-logline">"A group of kid cooks race to save family recipes before they're lost forever — learning kitchen science along the way."</p>
+          <div class="ip-meta">
+            <span>🍳 Cooking + Heritage</span>
+            <span>🧪 Kitchen Science</span>
+            <span>👧 Ages 6–10</span>
+          </div>
+        </div>
+
+        <div class="ip-card">
+          <div class="ip-card-header">
+            <h3>Seed Savers Society</h3>
+            <span class="status-tag status-concept">In Development</span>
+          </div>
+          <p class="ip-logline">"A secret club of young gardeners uncovers mysteries hidden in their town's oldest seeds — and learns why biodiversity matters."</p>
+          <div class="ip-meta">
+            <span>🌱 Environmental Mystery</span>
+            <span>🔍 Biodiversity</span>
+            <span>👧 Ages 8–12</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 40px;">
+        <a href="portfolio.html" class="btn-primary">View Full IP Portfolio &rarr;</a>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="capabilities">
+      <div class="section-header">
+        <h2>What We Develop</h2>
+        <p>End-to-end IP creation with partnership-ready packaging</p>
+      </div>
+
+      <div class="cap-grid">
+        <div class="cap-item">
+          <span class="cap-icon">🎬</span>
+          <h3>Original Series Development</h3>
+          <p>Character-driven YouTube, streaming, and animated series with complete production bibles.</p>
+        </div>
+        <div class="cap-item">
+          <span class="cap-icon">📚</span>
           <h3>Children's Publishing</h3>
+          <p>Multi-book franchises with authentic cultural voices, available through Amazon KDP.</p>
         </div>
-        <div class="focus-card">
-          <div class="focus-icon" role="img" aria-label="Art">🎨</div>
-          <h3>IP Licensing</h3>
+        <div class="cap-item">
+          <span class="cap-icon">🏗️</span>
+          <h3>Branded Worldbuilding</h3>
+          <p>Character universes designed from the ground up for licensing and brand integration.</p>
         </div>
-        <div class="focus-card">
-          <div class="focus-icon" role="img" aria-label="Business">💼</div>
-          <h3>IP Sales</h3>
-        </div>
-        <div class="focus-card">
-          <div class="focus-icon" role="img" aria-label="Education">🎓</div>
+        <div class="cap-item">
+          <span class="cap-icon">🎓</span>
           <h3>Educational Content</h3>
+          <p>STEM curriculum, cultural education, and environmental literacy woven into entertainment.</p>
+        </div>
+        <div class="cap-item">
+          <span class="cap-icon">🤝</span>
+          <h3>Co-Production</h3>
+          <p>Partnership-ready packages for studios, distributors, and streaming platforms.</p>
+        </div>
+        <div class="cap-item">
+          <span class="cap-icon">📋</span>
+          <h3>Licensing &amp; Distribution</h3>
+          <p>Scalable IP positioned for merchandise, publishing, and media licensing opportunities.</p>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
-      <h2>Let's Create Something Wonderful</h2>
-      <p>Interested in licensing, creative collaboration, or partnership opportunities?</p>
-      <a href="/cdn-cgi/l/email-protection#7b1814150f1a180f3b131a0f18131712151c161e1f121a55181416" class="cta-button">Get In Touch</a>
+    <!-- PARTNERSHIP CTA -->
+    <section class="partnership-cta">
+      <h2>Partner With Us</h2>
+      <p>
+        We seek strategic partners interested in co-production, financing, distribution, and licensing opportunities for emerging character-driven franchises.
+      </p>
+      <div class="inquiry-types">
+        <span class="inquiry-type">Licensing Opportunities</span>
+        <span class="inquiry-type">Development Partnerships</span>
+        <span class="inquiry-type">Co-production</span>
+        <span class="inquiry-type">Distribution</span>
+        <span class="inquiry-type">Brand Collaborations</span>
+      </div>
+      <a href="mailto:hello@hatchlingmedia.com?subject=Partnership%20Inquiry" class="btn-primary">Partnership Inquiries</a>
     </section>
   </main>
 
   <footer>
-    <div class="footer-content">
-      <div class="footer-logo">🐣 Hatchling Media</div>
-      <nav class="footer-links" aria-label="Footer navigation">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="Hatchling_Media.png" alt="Hatchling Media">
+        <span>Hatchling Media</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="/cdn-cgi/l/email-protection#dfbcb0b1abbebcab9fb7beabbcb7b3b6b1b8b2babbb6bef1bcb0b2">Contact</a>
+        <a href="portfolio.html">IP Portfolio</a>
+        <a href="slate.html">Development Slate</a>
+        <a href="studio.html">Studio</a>
+        <a href="mailto:hello@hatchlingmedia.com">Contact</a>
       </nav>
-      <p class="footer-copyright">© 2025 Hatchling Media. All Rights Reserved.</p>
+      <div class="footer-legal">
+        &copy; 2025 Hatchling Media. All original characters and concepts are intellectual property of Hatchling Media.
+      </div>
     </div>
-  
+  </footer>
+</body>
+</html>

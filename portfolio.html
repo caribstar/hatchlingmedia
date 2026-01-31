@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IP Portfolio | Hatchling Media</title>
+  <meta name="description" content="Explore Hatchling Media's original intellectual property: Speedeet & Wilar, The Fix-It Twins, Recipe Rescue Crew, and Seed Savers Society. Available for licensing, co-production, and distribution." />
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:title" content="IP Portfolio | Hatchling Media">
+  <meta property="og:description" content="Original children's IP available for licensing, co-production, and distribution partnerships.">
+  <meta property="og:image" content="https://hatchlingmedia.com/Hatchling_Media.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-ink: #1a1a2e;
+      --color-ink-light: #3a3a5c;
+      --color-ink-muted: #6e6e8a;
+      --color-paper: #ffffff;
+      --color-paper-warm: #fafaf8;
+      --color-paper-soft: #f4f3f0;
+      --color-accent: #2563eb;
+      --color-accent-dark: #1d4ed8;
+      --color-accent-light: #dbeafe;
+      --color-gold: #d4a017;
+      --color-gold-light: #fef3c7;
+      --color-border: #e5e5e0;
+      --color-green: #166534;
+      --color-green-bg: #dcfce7;
+      --color-amber: #92400e;
+      --color-amber-bg: #fef3c7;
+      --color-indigo: #3730a3;
+      --color-indigo-bg: #e0e7ff;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-paper);
+      color: var(--color-ink);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      padding: 18px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--color-paper);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo img { height: 42px; width: auto; }
+    .logo-text { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--color-ink); letter-spacing: -0.02em; }
+
+    nav { display: flex; gap: 36px; align-items: center; }
+    nav a { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--color-ink-light); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--color-accent); }
+    nav a.nav-cta { background: var(--color-ink); color: white; padding: 10px 20px; border-radius: 6px; text-transform: none; letter-spacing: 0; font-size: 14px; transition: background 0.2s; }
+    nav a.nav-cta:hover { background: var(--color-accent); }
+    .mobile-menu { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--color-ink); }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 80px 48px 48px;
+      text-align: center;
+      background: var(--color-paper-soft);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 800;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      color: var(--color-ink-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ─── IP ENTRIES ─── */
+    .ip-entries {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+
+    .ip-entry {
+      padding: 64px 0;
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .ip-entry:last-child { border-bottom: none; }
+
+    .ip-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .ip-entry h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-ink);
+      letter-spacing: -0.01em;
+    }
+
+    .status-tag {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    .status-published { background: var(--color-green-bg); color: var(--color-green); }
+    .status-development { background: var(--color-amber-bg); color: var(--color-amber); }
+    .status-concept { background: var(--color-indigo-bg); color: var(--color-indigo); }
+
+    .ip-logline {
+      font-size: 18px;
+      font-style: italic;
+      color: var(--color-ink-light);
+      margin-bottom: 24px;
+      line-height: 1.6;
+      padding-left: 20px;
+      border-left: 3px solid var(--color-accent);
+    }
+
+    .ip-overview {
+      font-size: 15px;
+      color: var(--color-ink-light);
+      line-height: 1.8;
+      margin-bottom: 28px;
+    }
+
+    .ip-overview p + p { margin-top: 12px; }
+
+    /* Character artwork */
+    .ip-artwork {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 28px;
+      align-items: flex-end;
+    }
+
+    .artwork-item {
+      text-align: center;
+    }
+
+    .artwork-item img {
+      width: 120px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 2px solid var(--color-border);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .artwork-item span {
+      display: block;
+      margin-top: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-ink-muted);
+    }
+
+    /* Detail grids */
+    .ip-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .detail-box {
+      background: var(--color-paper-soft);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .detail-box h4 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-ink-muted);
+      margin-bottom: 10px;
+    }
+
+    .detail-box ul {
+      list-style: none;
+      font-size: 14px;
+      color: var(--color-ink-light);
+    }
+
+    .detail-box li {
+      padding: 3px 0;
+    }
+
+    .detail-box li::before {
+      content: "✓ ";
+      color: var(--color-accent);
+      font-weight: 700;
+    }
+
+    /* Tags */
+    .ip-tags {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .ip-tag {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 14px;
+      border-radius: 100px;
+      background: var(--color-accent-light);
+      color: var(--color-accent);
+    }
+
+    /* Series details */
+    .series-detail {
+      background: var(--color-paper-warm);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .series-detail h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 10px;
+    }
+
+    .series-books {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      font-size: 14px;
+      color: var(--color-ink-light);
+    }
+
+    .series-books span::before {
+      content: "📖 ";
+    }
+
+    /* CTA bar */
+    .ip-cta {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: var(--color-ink);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary:hover { background: var(--color-accent); transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--color-ink);
+      padding: 12px 28px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      border: 2px solid var(--color-border);
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover { border-color: var(--color-ink); }
+
+    /* ─── BOTTOM CTA ─── */
+    .bottom-cta {
+      background: var(--color-ink);
+      color: white;
+      padding: 64px 48px;
+      text-align: center;
+    }
+
+    .bottom-cta h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .bottom-cta p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 28px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bottom-cta .btn-primary {
+      background: white;
+      color: var(--color-ink);
+    }
+
+    .bottom-cta .btn-primary:hover {
+      background: var(--color-accent-light);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--color-ink);
+      color: white;
+      padding: 48px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand img { height: 28px; }
+    .footer-brand span { font-family: var(--font-display); font-size: 16px; font-weight: 700; }
+
+    .footer-nav { display: flex; gap: 28px; }
+    .footer-nav a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: white; }
+
+    .footer-legal {
+      width: 100%;
+      text-align: center;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      header { padding: 16px 20px; }
+      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; gap: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-bottom: 1px solid var(--color-border); }
+      nav.open { display: flex; }
+      .mobile-menu { display: block; }
+      .page-header { padding: 48px 20px 36px; }
+      .ip-entries { padding: 0 20px; }
+      .ip-entry { padding: 40px 0; }
+      .ip-details { grid-template-columns: 1fr; }
+      .series-books { grid-template-columns: 1fr; }
+      .ip-artwork { flex-wrap: wrap; }
+      .bottom-cta { padding: 48px 20px; }
+      footer { padding: 32px 20px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-nav { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="Hatchling_Media.png" alt="Hatchling Media logo">
+      <span class="logo-text">Hatchling Media</span>
+    </a>
+    <button class="mobile-menu" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html" class="active">IP Portfolio</a>
+      <a href="slate.html">Development Slate</a>
+      <a href="studio.html">Studio</a>
+      <a href="mailto:hello@hatchlingmedia.com" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>IP Portfolio</h1>
+    <p>Original worlds and characters created for licensing, co-production, and distribution partnerships.</p>
+  </section>
+
+  <main class="ip-entries">
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SPEEDEET & WILAR -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <article class="ip-entry">
+      <div class="ip-entry-header">
+        <h2>Speedeet &amp; Wilar</h2>
+        <span class="status-tag status-published">Available for Licensing</span>
+      </div>
+
+      <p class="ip-logline">
+        Two best friends tackle everyday fun and cultural adventures with heart, humor, and resilience — celebrating Caribbean life through authentic Guyanese Creolese storytelling.
+      </p>
+
+      <div class="ip-artwork">
+        <div class="artwork-item">
+          <img src="speedeet-character.jpg" alt="Speedeet — an energetic Afro-Guyanese boy in a yellow shirt, the fast-talking adventurous protagonist">
+          <span>Speedeet</span>
+        </div>
+        <div class="artwork-item">
+          <img src="wilar-character.jpg" alt="Wilar — a thoughtful Indo-Guyanese boy with glasses and crossed arms, Speedeet's loyal best friend">
+          <span>Wilar</span>
+        </div>
+      </div>
+
+      <div class="ip-overview">
+        <p>
+          Speedeet & Wilar is a culturally rich, humor-driven children's IP centered on two twelve-year-old friends from Pike Street, Kitty, Georgetown, Guyana. Written entirely in authentic Guyanese Creolese, the series is the first of its kind — bringing Caribbean youth culture and language to a global audience.
+        </p>
+        <p>
+          The franchise spans two published book series and a complete 26-episode animation-ready season, with supporting characters, a full series bible, and HeyGen video prototypes already produced.
+        </p>
+      </div>
+
+      <div class="ip-tags">
+        <span class="ip-tag">Kids &amp; Family</span>
+        <span class="ip-tag">Caribbean Culture</span>
+        <span class="ip-tag">Ages 7–12</span>
+        <span class="ip-tag">Animation Ready</span>
+        <span class="ip-tag">Creolese Language</span>
+      </div>
+
+      <div class="series-detail">
+        <h4>Series 1: The Adventures of Speedeet &amp; Wilar (Pike Street)</h4>
+        <div class="series-books">
+          <span>Book 1: Stories from Pike Street</span>
+          <span>Book 2: Growth &amp; Challenge</span>
+          <span>Book 3: Community &amp; Adventure</span>
+          <span>Book 4: Legacy &amp; Dreams</span>
+        </div>
+      </div>
+
+      <div class="series-detail">
+        <h4>Series 2: Caribbean Adventures</h4>
+        <div class="series-books">
+          <span>Jamaica Adventures</span>
+          <span>Trinidad Adventures</span>
+          <span>Guyana Adventures</span>
+          <span>Barbados, Bahamas &amp; St. Lucia</span>
+        </div>
+      </div>
+
+      <div class="ip-details">
+        <div class="detail-box">
+          <h4>Available Assets</h4>
+          <ul>
+            <li>8 published books (Amazon KDP)</li>
+            <li>Complete series bible</li>
+            <li>26-episode Season 1 scripts</li>
+            <li>Character designs &amp; artwork</li>
+            <li>HeyGen video prototypes</li>
+            <li>YouTube pilot scripts</li>
+          </ul>
+        </div>
+        <div class="detail-box">
+          <h4>Market Opportunity</h4>
+          <ul>
+            <li>Caribbean diaspora: 20M+ globally</li>
+            <li>Underserved market for Caribbean children's content</li>
+            <li>Authentic regional voices &amp; language</li>
+            <li>Cross-cultural appeal</li>
+            <li>YouTube Kids ready</li>
+          </ul>
+        </div>
+        <div class="detail-box">
+          <h4>Partnership Opportunities</h4>
+          <ul>
+            <li>Animation &amp; streaming rights</li>
+            <li>Publishing partnerships</li>
+            <li>Educational licensing</li>
+            <li>Merchandise &amp; consumer products</li>
+            <li>Brand integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ip-cta">
+        <a href="mailto:hello@hatchlingmedia.com?subject=Speedeet%20%26%20Wilar%20-%20Licensing%20Inquiry" class="btn-primary">Request Materials</a>
+        <a href="mailto:hello@hatchlingmedia.com?subject=Speedeet%20%26%20Wilar%20-%20Schedule%20Call" class="btn-outline">Schedule a Call</a>
+      </div>
+    </article>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- THE FIX-IT TWINS -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <article class="ip-entry">
+      <div class="ip-entry-header">
+        <h2>The Fix-It Twins</h2>
+        <span class="status-tag status-development">In Development</span>
+      </div>
+
+      <p class="ip-logline">
+        Ten-year-old twins discover that fixing things is really about fixing what matters — family, friendship, and community.
+      </p>
+
+      <div class="ip-overview">
+        <p>
+          The Fix-It Twins follows Emma and Jack Henderson, ten-year-old siblings who spend their afternoons in Grandpa Joe's workshop learning to repair broken objects — and in the process, learning to repair what really counts. Set in the fictional town of Maplewood, the series champions repair culture, STEM learning, and intergenerational connection.
+        </p>
+        <p>
+          With a complete Book 1 manuscript, 10-episode season outline, full character profiles, and STEM curriculum guide, this IP is packaged for animation, publishing, and educational licensing.
+        </p>
+      </div>
+
+      <div class="ip-tags">
+        <span class="ip-tag">Kids &amp; Family</span>
+        <span class="ip-tag">STEM Education</span>
+        <span class="ip-tag">Ages 6–10</span>
+        <span class="ip-tag">Repair Culture</span>
+        <span class="ip-tag">Intergenerational</span>
+      </div>
+
+      <div class="ip-details">
+        <div class="detail-box">
+          <h4>Available Assets</h4>
+          <ul>
+            <li>Complete series bible</li>
+            <li>Book 1 manuscript (~11,000 words)</li>
+            <li>10-episode season outline</li>
+            <li>5 full episode scripts</li>
+            <li>YouTube pilot scripts</li>
+            <li>STEM curriculum guide</li>
+          </ul>
+        </div>
+        <div class="detail-box">
+          <h4>Market Opportunity</h4>
+          <ul>
+            <li>STEM content demand at all-time high</li>
+            <li>Repair culture aligns with sustainability trend</li>
+            <li>Champions real-world problem-solving</li>
+            <li>Comparable: Rosie Revere, Ada Twist</li>
+            <li>YouTube Kids &amp; Amazon Kids+ compliant</li>
+          </ul>
+        </div>
+        <div class="detail-box">
+          <h4>Partnership Opportunities</h4>
+          <ul>
+            <li>Animation development</li>
+            <li>Publishing partnerships</li>
+            <li>STEM educational licensing</li>
+            <li>Toy &amp; activity kit licensing</li>
+            <li>School curriculum integration</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ip-cta">
+        <a href="mailto:hello@hatchlingmedia.com?subject=Fix-It%20Twins%20-%20Development%20Inquiry" class="btn-primary">Request Materials</a>
+        <a href="mailto:hello@hatchlingmedia.com?subject=Fix-It%20Twins%20-%20Schedule%20Call" class="btn-outline">Schedule a Call</a>
+      </div>
+    </article>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- RECIPE RESCUE CREW -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <article class="ip-entry">
+      <div class="ip-entry-header">
+        <h2>Recipe Rescue Crew</h2>
+        <span class="status-tag status-concept">In Development</span>
+      </div>
+
+      <p class="ip-logline">
+        A group of kid cooks race to save family recipes before they're lost forever — learning kitchen science and celebrating cultural heritage along the way.
+      </p>
+
+      <div class="ip-overview">
+        <p>
+          Recipe Rescue Crew follows four diverse kids who form a secret mission to preserve family recipes at risk of being forgotten. Each episode blends cooking adventure with cultural storytelling and kitchen science, creating a format that entertains while teaching nutrition, food science, and the importance of family heritage.
+        </p>
+      </div>
+
+      <div class="ip-tags">
+        <span class="ip-tag">Kids &amp; Family</span>
+        <span class="ip-tag">Cooking &amp; Nutrition</span>
+        <span class="ip-tag">Ages 6–10</span>
+        <span class="ip-tag">Cultural Heritage</span>
+        <span class="ip-tag">Kitchen Science</span>
+      </div>
+
+      <div class="ip-details">
+        <div class="detail-box">
+          <h4>Available Assets</h4>
+          <ul>
+            <li>Complete concept document</li>
+            <li>Character profiles</li>
+            <li>Episode structure &amp; format</li>
+            <li>Season 1 story arc</li>
+          </ul>
+        </div>
+        <div class="detail-box">
+          <h4>Market Opportunity</h4>
+          <ul>
+            <li>Gap for problem-solving cooking content</li>
+            <li>Kitchen science meets multicultural heritage</li>
+            <li>Branded partnership potential (food, cookware)</li>
+            <li>Comparable: MasterChef Junior format</li>
+          </ul>
+        </div>
+        <div class="detail-box">
+          <h4>Partnership Opportunities</h4>
+          <ul>
+            <li>Co-production &amp; development</li>
+            <li>Brand integration (food/kitchen)</li>
+            <li>Publishing &amp; cookbook tie-ins</li>
+            <li>Educational licensing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ip-cta">
+        <a href="mailto:hello@hatchlingmedia.com?subject=Recipe%20Rescue%20Crew%20-%20Inquiry" class="btn-primary">Request Concept Package</a>
+      </div>
+    </article>
+
+    <!-- ═══════════════════════════════════════════════ -->
+    <!-- SEED SAVERS SOCIETY -->
+    <!-- ═══════════════════════════════════════════════ -->
+    <article class="ip-entry">
+      <div class="ip-entry-header">
+        <h2>Seed Savers Society</h2>
+        <span class="status-tag status-concept">In Development</span>
+      </div>
+
+      <p class="ip-logline">
+        A secret club of young gardeners uncovers mysteries hidden in their town's oldest seeds — and learns why biodiversity matters before it's too late.
+      </p>
+
+      <div class="ip-overview">
+        <p>
+          Seed Savers Society follows five kids who discover a hidden seed vault beneath their community garden and form a secret society to protect rare plant species from disappearing. Part environmental mystery, part adventure series, this IP makes biodiversity tangible and urgent through kid-driven storytelling.
+        </p>
+      </div>
+
+      <div class="ip-tags">
+        <span class="ip-tag">Kids &amp; Family</span>
+        <span class="ip-tag">Environmental Mystery</span>
+        <span class="ip-tag">Ages 8–12</span>
+        <span class="ip-tag">Biodiversity</span>
+        <span class="ip-tag">Adventure</span>
+      </div>
+
+      <div class="ip-details">
+        <div class="detail-box">
+          <h4>Available Assets</h4>
+          <ul>
+            <li>Complete concept document</li>
+            <li>Character profiles</li>
+            <li>Season 1 story arc</li>
+            <li>World-building framework</li>
+          </ul>
+        </div>
+        <div class="detail-box">
+          <h4>Market Opportunity</h4>
+          <ul>
+            <li>Environmental content without preachiness</li>
+            <li>Makes biodiversity tangible through mystery</li>
+            <li>Garden industry partnership potential</li>
+            <li>Comparable: Hoot, The Wild Robot</li>
+          </ul>
+        </div>
+        <div class="detail-box">
+          <h4>Partnership Opportunities</h4>
+          <ul>
+            <li>Co-production &amp; development</li>
+            <li>Environmental brand partnerships</li>
+            <li>Publishing &amp; chapter book series</li>
+            <li>School garden program licensing</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ip-cta">
+        <a href="mailto:hello@hatchlingmedia.com?subject=Seed%20Savers%20Society%20-%20Inquiry" class="btn-primary">Request Concept Package</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <h2>Interested in Our IP?</h2>
+    <p>Serious inquiries may request access to pitch materials, development previews, and press kits.</p>
+    <a href="mailto:hello@hatchlingmedia.com?subject=IP%20Portfolio%20-%20General%20Inquiry" class="btn-primary">Contact for Access</a>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="Hatchling_Media.png" alt="Hatchling Media">
+        <span>Hatchling Media</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">IP Portfolio</a>
+        <a href="slate.html">Development Slate</a>
+        <a href="studio.html">Studio</a>
+        <a href="mailto:hello@hatchlingmedia.com">Contact</a>
+      </nav>
+      <div class="footer-legal">
+        &copy; 2025 Hatchling Media. All original characters and concepts are intellectual property of Hatchling Media.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

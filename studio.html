@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio | Hatchling Media</title>
+  <meta name="description" content="Hatchling Media is an independent creative studio founded by Albert Massay, developing original intellectual property for animation, digital entertainment, and licensing." />
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta property="og:title" content="Studio | Hatchling Media">
+  <meta property="og:description" content="The creative studio of Albert Massay. Developing original characters, stories, and universes for global partnerships.">
+  <meta property="og:image" content="https://hatchlingmedia.com/Hatchling_Media.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-ink: #1a1a2e;
+      --color-ink-light: #3a3a5c;
+      --color-ink-muted: #6e6e8a;
+      --color-paper: #ffffff;
+      --color-paper-warm: #fafaf8;
+      --color-paper-soft: #f4f3f0;
+      --color-accent: #2563eb;
+      --color-accent-light: #dbeafe;
+      --color-border: #e5e5e0;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-paper);
+      color: var(--color-ink);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* ─── HEADER ─── */
+    header {
+      padding: 18px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--color-paper);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo img { height: 42px; width: auto; }
+    .logo-text { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--color-ink); letter-spacing: -0.02em; }
+
+    nav { display: flex; gap: 36px; align-items: center; }
+    nav a { font-family: var(--font-body); font-size: 14px; font-weight: 600; color: var(--color-ink-light); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; transition: color 0.2s; }
+    nav a:hover, nav a.active { color: var(--color-accent); }
+    nav a.nav-cta { background: var(--color-ink); color: white; padding: 10px 20px; border-radius: 6px; text-transform: none; letter-spacing: 0; font-size: 14px; transition: background 0.2s; }
+    nav a.nav-cta:hover { background: var(--color-accent); }
+    .mobile-menu { display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--color-ink); }
+
+    /* ─── PAGE HEADER ─── */
+    .page-header {
+      padding: 80px 48px 48px;
+      text-align: center;
+      background: var(--color-paper-soft);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 800;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+      letter-spacing: -0.02em;
+    }
+
+    .page-header p {
+      font-size: 17px;
+      color: var(--color-ink-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ─── CREATOR SECTION ─── */
+    .creator-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 72px 48px;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .creator-photo {
+      width: 200px;
+      height: 240px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid var(--color-border);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .creator-info h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 4px;
+    }
+
+    .creator-title {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+
+    .creator-bio {
+      font-size: 16px;
+      color: var(--color-ink-light);
+      line-height: 1.85;
+    }
+
+    .creator-bio p + p { margin-top: 16px; }
+
+    /* ─── STUDIO DESCRIPTION ─── */
+    .studio-description {
+      background: var(--color-paper-soft);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+      padding: 72px 48px;
+    }
+
+    .studio-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .studio-inner h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 20px;
+    }
+
+    .studio-inner p {
+      font-size: 16px;
+      color: var(--color-ink-light);
+      line-height: 1.85;
+    }
+
+    .studio-inner p + p { margin-top: 16px; }
+
+    /* ─── PHILOSOPHY ─── */
+    .philosophy {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 72px 48px;
+    }
+
+    .philosophy h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 20px;
+    }
+
+    .philosophy p {
+      font-size: 16px;
+      color: var(--color-ink-light);
+      line-height: 1.85;
+      margin-bottom: 36px;
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .philosophy-item {
+      background: var(--color-paper-warm);
+      border: 1px solid var(--color-border);
+      border-radius: 10px;
+      padding: 28px;
+    }
+
+    .philosophy-item h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 8px;
+    }
+
+    .philosophy-item p {
+      font-size: 14px;
+      color: var(--color-ink-muted);
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+
+    /* ─── CONTACT SECTION ─── */
+    .contact-section {
+      background: var(--color-ink);
+      color: white;
+      padding: 80px 48px;
+    }
+
+    .contact-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-inner h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .contact-inner > p {
+      font-size: 16px;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .contact-categories {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .contact-cat {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 24px 16px;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .contact-cat:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(255,255,255,0.2);
+    }
+
+    .contact-cat-icon {
+      font-size: 24px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .contact-cat h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .contact-cat p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .contact-email {
+      display: inline-block;
+      background: white;
+      color: var(--color-ink);
+      padding: 16px 36px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .contact-email:hover {
+      background: var(--color-accent-light);
+      transform: translateY(-1px);
+    }
+
+    .contact-note {
+      margin-top: 20px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--color-ink);
+      color: white;
+      padding: 48px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-inner { max-width: 960px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand img { height: 28px; }
+    .footer-brand span { font-family: var(--font-display); font-size: 16px; font-weight: 700; }
+    .footer-nav { display: flex; gap: 28px; }
+    .footer-nav a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.2s; }
+    .footer-nav a:hover { color: white; }
+    .footer-legal { width: 100%; text-align: center; margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: rgba(255,255,255,0.4); }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      header { padding: 16px 20px; }
+      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; gap: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border-bottom: 1px solid var(--color-border); }
+      nav.open { display: flex; }
+      .mobile-menu { display: block; }
+      .page-header { padding: 48px 20px 36px; }
+      .creator-section { grid-template-columns: 1fr; padding: 48px 20px; text-align: center; }
+      .creator-photo { margin: 0 auto; }
+      .studio-description { padding: 48px 20px; }
+      .philosophy { padding: 48px 20px; }
+      .philosophy-grid { grid-template-columns: 1fr; }
+      .contact-section { padding: 48px 20px; }
+      .contact-categories { grid-template-columns: 1fr; }
+      footer { padding: 32px 20px; }
+      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-nav { flex-wrap: wrap; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="Hatchling_Media.png" alt="Hatchling Media logo">
+      <span class="logo-text">Hatchling Media</span>
+    </a>
+    <button class="mobile-menu" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">IP Portfolio</a>
+      <a href="slate.html">Development Slate</a>
+      <a href="studio.html" class="active">Studio</a>
+      <a href="mailto:hello@hatchlingmedia.com" class="nav-cta">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>The Studio &amp; Creator</h1>
+    <p>An independent creative studio building original worlds for global audiences.</p>
+  </section>
+
+  <main>
+    <!-- CREATOR -->
+    <section class="creator-section">
+      <img src="albert-massay.jpg" alt="Albert Massay, founder and creator at Hatchling Media" class="creator-photo">
+      <div class="creator-info">
+        <h2>Albert Massay</h2>
+        <p class="creator-title">Founder &amp; Creator</p>
+        <div class="creator-bio">
+          <p>
+            Albert Massay is a storyteller and creator developing original animated worlds and characters with long-term franchise potential. His work focuses on creating authentic, culturally rich stories while building scalable properties suitable for digital platforms, streaming services, and brand partnerships.
+          </p>
+          <p>
+            A Guyanese-American creator, Massay brings a deep commitment to Caribbean cultural preservation into his storytelling. His published series, <em>Speedeet &amp; Wilar</em>, is written entirely in authentic Guyanese Creolese — the first children's book series of its kind — and celebrates the humor, warmth, and spirit of Caribbean life for a global audience.
+          </p>
+          <p>
+            Through Hatchling Media, Massay is building a portfolio of original intellectual property spanning animation, publishing, and educational content, with each project designed from the ground up for multi-platform growth and partnership readiness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO -->
+    <section class="studio-description">
+      <div class="studio-inner">
+        <h2>About the Studio</h2>
+        <p>
+          Hatchling Media is an independent creative studio founded by creator Albert Massay, focused on developing original intellectual property for animation, digital entertainment, and licensing opportunities.
+        </p>
+        <p>
+          The studio specializes in building character-driven stories rooted in humor, community, and relatable experiences, designed to resonate with global family and youth audiences. Every project begins with original characters and worlds, developed through a repeatable process from concept to production-ready packaging.
+        </p>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY -->
+    <section class="philosophy">
+      <h2>Studio Philosophy</h2>
+      <p>
+        We believe strong characters and relatable worlds are the foundation of enduring entertainment franchises. Our goal is to develop stories that entertain audiences while creating opportunities for long-term brand and licensing growth.
+      </p>
+
+      <div class="philosophy-grid">
+        <div class="philosophy-item">
+          <h3>Creator-Led Development</h3>
+          <p>Every project originates with a singular creative vision, ensuring authentic storytelling and consistent world-building from concept through production.</p>
+        </div>
+        <div class="philosophy-item">
+          <h3>Partnership-Ready Packaging</h3>
+          <p>We develop series bibles, character designs, scripts, and production materials that enable studios and distributors to move quickly.</p>
+        </div>
+        <div class="philosophy-item">
+          <h3>Scalable IP Architecture</h3>
+          <p>Each property is designed for multi-platform growth — from books and animation to licensing, merchandise, and educational programs.</p>
+        </div>
+        <div class="philosophy-item">
+          <h3>Cultural Authenticity</h3>
+          <p>We create stories rooted in real communities and genuine voices, bringing underrepresented cultures and perspectives to global audiences.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section">
+      <div class="contact-inner">
+        <h2>Get in Touch</h2>
+        <p>For inquiries regarding licensing, development partnerships, or distribution opportunities.</p>
+
+        <div class="contact-categories">
+          <div class="contact-cat">
+            <span class="contact-cat-icon">📋</span>
+            <h3>Licensing Opportunities</h3>
+            <p>Characters, publishing, merchandise</p>
+          </div>
+          <div class="contact-cat">
+            <span class="contact-cat-icon">🤝</span>
+            <h3>Development Partnerships</h3>
+            <p>Co-production, financing, collaboration</p>
+          </div>
+          <div class="contact-cat">
+            <span class="contact-cat-icon">📡</span>
+            <h3>Distribution</h3>
+            <p>Streaming, broadcast, digital platforms</p>
+          </div>
+          <div class="contact-cat">
+            <span class="contact-cat-icon">🏷️</span>
+            <h3>Brand Collaborations</h3>
+            <p>Brand integration, sponsored content</p>
+          </div>
+          <div class="contact-cat">
+            <span class="contact-cat-icon">📰</span>
+            <h3>Media &amp; Press</h3>
+            <p>Interviews, features, press materials</p>
+          </div>
+          <div class="contact-cat">
+            <span class="contact-cat-icon">📁</span>
+            <h3>Pitch Materials</h3>
+            <p>Request access to decks and previews</p>
+          </div>
+        </div>
+
+        <a href="mailto:hello@hatchlingmedia.com?subject=Studio%20Inquiry" class="contact-email">hello@hatchlingmedia.com</a>
+
+        <p class="contact-note">Serious inquiries may request access to pitch materials, development previews, or press kits.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="Hatchling_Media.png" alt="Hatchling Media">
+        <span>Hatchling Media</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">IP Portfolio</a>
+        <a href="slate.html">Development Slate</a>
+        <a href="studio.html">Studio</a>
+        <a href="mailto:hello@hatchlingmedia.com">Contact</a>
+      </nav>
+      <div class="footer-legal">
+        &copy; 2025 Hatchling Media. All original characters and concepts are intellectual property of Hatchling Media.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
