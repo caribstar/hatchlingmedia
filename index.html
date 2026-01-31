@@ -397,10 +397,10 @@
 <body>
   <header>
     <a href="index.html" class="logo">
-      <img src="Hatchling_Media.png" alt="Hatchling Media">
+      <img src="Hatchling_Media.png" alt="Hatchling Media logo - a cute yellow chick hatching from an egg, representing new creative ideas being born">
     </a>
-    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
-    <nav id="nav">
+    <button class="mobile-menu" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+    <nav id="nav" role="navigation" aria-label="Main navigation">
       <a href="index.html" class="active">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html">Projects</a>
@@ -410,7 +410,7 @@
 
   <section class="hero">
     <div class="hero-logo">
-      <img src="Hatchling_Media.png" alt="Hatchling Media - A chick hatching from an egg">
+      <img src="Hatchling_Media.png" alt="Hatchling Media - an independent children's media company creating original stories and characters for kids and families">
     </div>
     <h1 class="hero-tagline">
       At Hatchling Media, we ignite young imaginations through <em>joyful, inclusive stories</em> that inspire curiosity, creativity, and connection for children and families everywhere.
@@ -425,23 +425,23 @@
       <h2 class="section-title">What We <span>Do</span></h2>
       <div class="focus-grid">
         <div class="focus-card">
-          <div class="focus-icon">🎬</div>
+          <div class="focus-icon" role="img" aria-label="Animation">🎬</div>
           <h3>Animation Development</h3>
         </div>
         <div class="focus-card">
-          <div class="focus-icon">📚</div>
+          <div class="focus-icon" role="img" aria-label="Books">📚</div>
           <h3>Children's Publishing</h3>
         </div>
         <div class="focus-card">
-          <div class="focus-icon">🎨</div>
+          <div class="focus-icon" role="img" aria-label="Art">🎨</div>
           <h3>IP Licensing</h3>
         </div>
         <div class="focus-card">
-          <div class="focus-icon">💼</div>
+          <div class="focus-icon" role="img" aria-label="Business">💼</div>
           <h3>IP Sales</h3>
         </div>
         <div class="focus-card">
-          <div class="focus-icon">🎓</div>
+          <div class="focus-icon" role="img" aria-label="Education">🎓</div>
           <h3>Educational Content</h3>
         </div>
       </div>
@@ -457,16 +457,12 @@
   <footer>
     <div class="footer-content">
       <div class="footer-logo">🐣 Hatchling Media</div>
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="mailto:contact@hatchlingmedia.com">Contact</a>
-      </div>
-      <div class="social-links">
-        <a href="#" title="YouTube">▶</a>
-        <a href="#" title="Instagram">📷</a>
-      </div>
+      </nav>
       <p class="footer-copyright">© 2025 Hatchling Media. All Rights Reserved.</p>
     </div>
   </footer>

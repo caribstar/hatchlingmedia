@@ -370,10 +370,10 @@
 <body>
   <header>
     <a href="index.html" class="logo">
-      <img src="Hatchling_Media.png" alt="Hatchling Media">
+      <img src="Hatchling_Media.png" alt="Hatchling Media logo - a cute yellow chick hatching from an egg">
     </a>
-    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
-    <nav id="nav">
+    <button class="mobile-menu" onclick="toggleMenu()" aria-label="Toggle navigation menu">☰</button>
+    <nav id="nav" role="navigation" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="about.html" class="active">About</a>
       <a href="projects.html">Projects</a>
@@ -388,14 +388,14 @@
 
   <main>
     <section class="content-section">
-      <h2><span class="icon">🎯</span> Our Mission</h2>
+      <h2><span class="icon" role="img" aria-label="Target">🎯</span> Our Mission</h2>
       <p>
         At Hatchling Media, our mission is to spark imagination and joy in children and families through original, culturally rooted storytelling and creative media experiences. We create characters, worlds, and stories that entertain, educate, and uplift young audiences — with heart, humor, and purpose.
       </p>
     </section>
 
     <section class="content-section">
-      <h2><span class="icon">📖</span> Our Story</h2>
+      <h2><span class="icon" role="img" aria-label="Book">📖</span> Our Story</h2>
       <p>
         Hatchling Media began with a simple idea: children deserve stories that reflect their world, speak to their curiosity, and celebrate diverse voices. Born from a passion for kids' storytelling and authentic character-driven content, we set out to build creator-led intellectual property that resonates with young minds and the grownups who support them.
       </p>
@@ -405,50 +405,50 @@
     </section>
 
     <section class="content-section">
-      <h2><span class="icon">🛠️</span> What We Do</h2>
+      <h2><span class="icon" role="img" aria-label="Tools">🛠️</span> What We Do</h2>
       <p>We develop and produce:</p>
       <div class="what-we-do">
         <ul>
-          <li><span class="icon">🎨</span> Original animated content for kids and families</li>
-          <li><span class="icon">📖</span> Story-driven publishing (books, guides, curriculum)</li>
-          <li><span class="icon">🎬</span> Creative collaboration with educators, partners, and broadcasters</li>
-          <li><span class="icon">📡</span> Licensing & distribution of family-friendly IP</li>
+          <li><span class="icon" role="img" aria-label="Art">🎨</span> Original animated content for kids and families</li>
+          <li><span class="icon" role="img" aria-label="Book">📖</span> Story-driven publishing (books, guides, curriculum)</li>
+          <li><span class="icon" role="img" aria-label="Film">🎬</span> Creative collaboration with educators, partners, and broadcasters</li>
+          <li><span class="icon" role="img" aria-label="Broadcast">📡</span> Licensing & distribution of family-friendly IP</li>
         </ul>
       </div>
     </section>
 
     <section class="content-section">
-      <h2><span class="icon">💎</span> Our Values</h2>
+      <h2><span class="icon" role="img" aria-label="Diamond">💎</span> Our Values</h2>
       <p>We believe in:</p>
       <div class="values-grid">
         <div class="value-item">
-          <div class="icon">🌈</div>
+          <div class="icon" role="img" aria-label="Rainbow">🌈</div>
           <p>Inclusive and joyful storytelling</p>
         </div>
         <div class="value-item">
-          <div class="icon">✨</div>
+          <div class="icon" role="img" aria-label="Sparkle">✨</div>
           <p>Creativity without compromise</p>
         </div>
         <div class="value-item">
-          <div class="icon">🗣️</div>
+          <div class="icon" role="img" aria-label="Speaking">🗣️</div>
           <p>Empowering young voices</p>
         </div>
         <div class="value-item">
-          <div class="icon">🎁</div>
+          <div class="icon" role="img" aria-label="Gift">🎁</div>
           <p>Media that entertains and enriches</p>
         </div>
       </div>
     </section>
 
     <div class="highlight-box">
-      <h3>💡 Why It Matters</h3>
+      <h3><span role="img" aria-label="Light bulb">💡</span> Why It Matters</h3>
       <p>
         In a world crowded with content, Hatchling Media focuses on meaningful creativity — stories that leave a smile, a lesson, or a spark of wonder. We want every child who encounters our work to feel seen, inspired, and eager to explore.
       </p>
     </div>
 
     <section class="content-section">
-      <h2><span class="icon">👥</span> Our Approach</h2>
+      <h2><span class="icon" role="img" aria-label="People">👥</span> Our Approach</h2>
       <p>
         We're a dedicated team of writers, creators, educators, and storytellers united by one purpose: to make media that matters. We combine experience in children's entertainment, developmental learning, and cultural representation to build content that's as smart as it is fun.
       </p>
@@ -466,12 +466,12 @@
   <footer>
     <div class="footer-content">
       <div class="footer-logo">🐣 Hatchling Media</div>
-      <div class="footer-links">
+      <nav class="footer-links" aria-label="Footer navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
         <a href="mailto:contact@hatchlingmedia.com">Contact</a>
-      </div>
+      </nav>
       <p class="footer-copyright">© 2025 Hatchling Media. All Rights Reserved.</p>
     </div>
   </footer>
