@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Hatchling Media</title>
-  <meta name="description" content="Explore Hatchling Media's original children's properties including The Fix-It Twins, Speedeet & Wilar, Recipe Rescue Crew, and Seed Savers Society." />
-  <meta name="keywords" content="children's media, kids shows, animation, children's books, The Fix-It Twins, Speedeet and Wilar, Recipe Rescue Crew, Seed Savers Society, IP licensing, children's content" />
+  <meta name="description" content="Explore Hatchling Media's original children's IP: Speedeet & Wilar, The Fix-It Twins, Recipe Rescue Crew, and Seed Savers Society. Multi-platform storytelling for animation, publishing, and licensing." />
+  <meta name="keywords" content="children's media, kids shows, animation, children's books, The Fix-It Twins, Speedeet and Wilar, Recipe Rescue Crew, Seed Savers Society, IP licensing, children's content, STEM education" />
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Projects | Hatchling Media">
+  <meta property="og:description" content="Original children's IP designed for multi-platform storytelling: animation, publishing, digital series, and licensing.">
+  <meta property="og:image" content="https://hatchlingmedia.com/Hatchling_Media.png">
+  <meta property="og:url" content="https://hatchlingmedia.com/projects.html">
   
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -130,14 +136,30 @@
     .page-header p {
       font-size: 18px;
       color: var(--color-ink-light);
-      max-width: 600px;
+      max-width: 700px;
       margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* Intro Section */
+    .intro-section {
+      background: var(--color-paper);
+      padding: 40px 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .intro-section p {
+      font-size: 16px;
+      color: var(--color-ink-light);
+      line-height: 1.8;
+      text-align: center;
     }
 
     /* Main Content */
     main {
       flex: 1;
-      padding: 60px 40px;
+      padding: 40px 40px 60px;
     }
 
     /* Project Cards */
@@ -254,17 +276,28 @@
       font-size: 14px;
     }
 
-    /* Characters List */
-    .characters {
+    /* Logline */
+    .logline {
+      background: var(--color-paper-warm);
+      border-left: 4px solid var(--color-accent);
+      padding: 16px 20px;
+      margin-bottom: 20px;
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--color-ink);
+    }
+
+    /* Key Themes */
+    .themes-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
       margin-top: 12px;
     }
 
-    .character {
-      background: var(--color-paper-warm);
-      padding: 6px 12px;
+    .theme-tag {
+      background: var(--color-paper-soft);
+      padding: 6px 14px;
       border-radius: 16px;
       font-size: 13px;
       font-weight: 600;
@@ -291,8 +324,8 @@
       font-size: 18px;
     }
 
-    /* NEW: Why Now / Market Positioning Box */
-    .why-now {
+    /* Why It Matters Box */
+    .why-matters {
       background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
       border-left: 4px solid var(--color-accent);
       padding: 20px;
@@ -300,7 +333,7 @@
       margin-top: 24px;
     }
 
-    .why-now h4 {
+    .why-matters h4 {
       font-family: var(--font-display);
       font-size: 16px;
       color: var(--color-accent);
@@ -310,26 +343,53 @@
       gap: 8px;
     }
 
-    .why-now p {
+    .why-matters p {
       font-size: 14px;
       color: var(--color-ink-light);
       margin: 0;
-      line-height: 1.6;
+      line-height: 1.7;
     }
 
-    .why-now .comparables {
-      margin-top: 12px;
-      font-size: 13px;
-      color: var(--color-ink-muted);
-    }
-
-    .why-now .comparables strong {
-      color: var(--color-ink);
-    }
-
-    /* NEW: Development Status Box */
-    .dev-status {
+    /* Market Opportunities */
+    .market-opps {
       background: var(--color-paper-warm);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+
+    .market-opps h4 {
+      font-family: var(--font-display);
+      font-size: 16px;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .opps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+    }
+
+    .opp-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--color-ink-light);
+    }
+
+    .opp-item .check {
+      color: var(--color-secondary);
+      font-weight: bold;
+    }
+
+    /* Development Status */
+    .dev-status {
+      background: #f1f3f4;
       border-radius: 12px;
       padding: 20px;
       margin-top: 24px;
@@ -348,13 +408,13 @@
     .status-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 12px;
+      gap: 10px;
     }
 
     .status-item {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       font-size: 14px;
       color: var(--color-ink-light);
     }
@@ -368,7 +428,7 @@
       color: var(--color-orange);
     }
 
-    /* NEW: Materials Available */
+    /* Materials Available */
     .materials {
       display: flex;
       flex-wrap: wrap;
@@ -394,6 +454,78 @@
     .material-badge:hover {
       background: var(--color-accent);
       color: white;
+    }
+
+    /* Artwork Placeholder */
+    .artwork-placeholder {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border: 2px dashed #dee2e6;
+      border-radius: 12px;
+      padding: 40px 20px;
+      text-align: center;
+      margin-top: 24px;
+    }
+
+    .artwork-placeholder .icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      opacity: 0.5;
+    }
+
+    .artwork-placeholder p {
+      font-size: 14px;
+      color: var(--color-ink-muted);
+      margin: 0;
+    }
+
+    /* Character Artwork Display */
+    .character-artwork {
+      background: var(--color-paper-warm);
+      border-radius: 16px;
+      padding: 24px;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .character-artwork h4 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--color-ink);
+      margin-bottom: 20px;
+    }
+
+    .artwork-grid {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .artwork-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .artwork-item img {
+      width: 150px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .artwork-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .artwork-label {
+      font-family: var(--font-display);
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-ink);
     }
 
     /* Characters Section */
@@ -536,7 +668,7 @@
       color: var(--color-teal);
     }
 
-    /* NEW: Enhanced CTA Section */
+    /* Enhanced CTA Section */
     .cta-section {
       background: linear-gradient(135deg, var(--color-accent) 0%, #6B8DD6 100%);
       padding: 80px 40px;
@@ -553,11 +685,18 @@
 
     .cta-section .subtitle {
       font-size: 18px;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
       opacity: 0.95;
-      max-width: 600px;
+      max-width: 700px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .cta-section .founder {
+      font-size: 15px;
+      opacity: 0.85;
+      margin-bottom: 32px;
     }
 
     .cta-options {
@@ -587,6 +726,7 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 16px;
+      margin-bottom: 24px;
     }
 
     .cta-button {
@@ -618,6 +758,16 @@
       color: var(--color-accent);
     }
 
+    .cta-email {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    .cta-email a {
+      color: white;
+      text-decoration: underline;
+    }
+
     /* Footer */
     footer {
       background: var(--color-ink);
@@ -635,6 +785,13 @@
       font-family: var(--font-display);
       font-size: 24px;
       margin-bottom: 16px;
+    }
+
+    .footer-tagline {
+      font-size: 14px;
+      opacity: 0.7;
+      margin-bottom: 20px;
+      font-style: italic;
     }
 
     .footer-links {
@@ -692,8 +849,12 @@
         padding: 40px 20px;
       }
 
+      .intro-section {
+        padding: 30px 20px 10px;
+      }
+
       main {
-        padding: 40px 20px;
+        padding: 30px 20px 40px;
       }
 
       .project-header {
@@ -708,7 +869,7 @@
         font-size: 26px;
       }
 
-      .status-grid {
+      .status-grid, .opps-grid {
         grid-template-columns: 1fr;
       }
 
@@ -741,19 +902,23 @@
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="projects.html" class="active">Projects</a>
-      <a href="mailto:contact@hatchlingmedia.com">Contact</a>
+      <a href="/cdn-cgi/l/email-protection#aac2cfc6c6c5eac2cbdec9c2c6c3c4cdc7cfcec3cb84c9c5c7">Contact</a>
     </nav>
   </header>
 
   <section class="page-header">
     <h1>Our <span>Projects</span></h1>
-    <p>Original stories and characters created with heart, humor, and purpose—ready for licensing, co-production, and distribution</p>
+    <p>Original intellectual property for children and family audiences, designed for multi-platform storytelling</p>
+  </section>
+
+  <section class="intro-section">
+    <p>Each project is developed with clear audience targeting, strong character identities, and versatile formats ideal for animation, publishing, digital series, educational content, and licensing opportunities.</p>
   </section>
 
   <main>
     <div class="projects-grid">
       
-      <!-- Speedeet & Wilar - PUBLISHED -->
+      <!-- Speedeet & Wilar -->
       <article class="project-card">
         <div class="project-header speedeet">
           <span class="project-status">✓ Published</span>
@@ -761,25 +926,44 @@
           <p class="tagline">Caribbean adventures with heart and humor</p>
         </div>
         <div class="project-body">
-          <h3>About the Series</h3>
-          <p>
-            Follow best friends Speedeet and Wilar, two 12-year-old boys from Pike Street in Kitty, Georgetown, Guyana, as they navigate childhood adventures with wit, mischief, and genuine friendship. Written in authentic Guyanese Creolese, these stories celebrate Caribbean culture and the universal experience of growing up.
-          </p>
-
-          <h3>Main Characters</h3>
-          <div class="characters">
-            <span class="character">Speedeet (The Fast One)</span>
-            <span class="character">Wilar (The Loyal Friend)</span>
-            <span class="character">Ma</span>
-            <span class="character">Aunty Devi</span>
-            <span class="character">Lil Suzie</span>
-            <span class="character">Old Man Doodnauth</span>
+          
+          <div class="logline">
+            "Two best friends tackle everyday fun and cultural adventures with heart, humor, and resilience."
           </div>
 
-          <div class="why-now">
-            <h4>💡 Why This IP Matters Now</h4>
-            <p>Caribbean representation in children's media remains critically underserved. With 1M+ Guyanese diaspora and growing demand for authentic regional voices, Speedeet & Wilar fills a unique gap—stories that celebrate Caribbean childhood without centering trauma or migration.</p>
-            <p class="comparables"><strong>Comparable titles:</strong> Julian & Huey series, Hurricane Child, One Crazy Summer</p>
+          <h3>Overview</h3>
+          <p>
+            Speedeet & Wilar is a culturally rich, humor-driven children's IP centered on two adventurous friends navigating everyday life and creative challenges. Rooted in Caribbean culture and authentic Creolese language, this series celebrates friendship, resilience, and joyful exploration.
+          </p>
+
+          <h3>Key Themes</h3>
+          <div class="themes-list">
+            <span class="theme-tag">Friendship & Problem-Solving</span>
+            <span class="theme-tag">Cultural Representation</span>
+            <span class="theme-tag">Humor in Everyday Adventures</span>
+          </div>
+
+          <h3>Formats</h3>
+          <div class="formats">
+            <div class="format-item"><span class="icon">▶️</span> YouTube Series</div>
+            <div class="format-item"><span class="icon">📚</span> Children's Books</div>
+            <div class="format-item"><span class="icon">🎬</span> Animation Bibles</div>
+            <div class="format-item"><span class="icon">🎓</span> Curriculum Materials</div>
+          </div>
+
+          <div class="why-matters">
+            <h4>💡 Why It Matters</h4>
+            <p>Speedeet & Wilar brings authentic cultural representation with comedic storytelling grounded in Caribbean life and language. With 1M+ Guyanese diaspora and growing demand for diverse voices, this IP fills a unique gap—stories that celebrate Caribbean childhood without centering trauma or migration.</p>
+          </div>
+
+          <div class="market-opps">
+            <h4>📈 Market Opportunities</h4>
+            <div class="opps-grid">
+              <div class="opp-item"><span class="check">→</span> YouTube Kids series & shorts</div>
+              <div class="opp-item"><span class="check">→</span> Kids TV channels & global streamers</div>
+              <div class="opp-item"><span class="check">→</span> Printable & digital learning materials</div>
+              <div class="opp-item"><span class="check">→</span> Licensing for toys, apparel & educational products</div>
+            </div>
           </div>
 
           <div class="dev-status">
@@ -799,8 +983,22 @@
             </div>
           </div>
 
+          <div class="character-artwork">
+            <h4>Meet the Characters</h4>
+            <div class="artwork-grid">
+              <div class="artwork-item">
+                <img src="Speedeet.jpg" alt="Speedeet - an energetic Afro-Guyanese boy in a yellow shirt, the fast-talking adventurous protagonist">
+                <span class="artwork-label">Speedeet</span>
+              </div>
+              <div class="artwork-item">
+                <img src="Wilar.jpg" alt="Wilar - a thoughtful Indo-Guyanese boy with glasses and crossed arms, Speedeet's loyal best friend">
+                <span class="artwork-label">Wilar</span>
+              </div>
+            </div>
+          </div>
+
           <div class="project-meta">
-            <span class="meta-tag"><span class="icon">👶</span> Ages 8-12</span>
+            <span class="meta-tag"><span class="icon">👶</span> Ages 6–10</span>
             <span class="meta-tag"><span class="icon">🌴</span> Caribbean Setting</span>
             <span class="meta-tag"><span class="icon">🗣️</span> Creolese Dialogue</span>
             <span class="meta-tag"><span class="icon">📺</span> Animation Ready</span>
@@ -808,7 +1006,7 @@
         </div>
       </article>
 
-      <!-- The Fix-It Twins - IN DEVELOPMENT -->
+      <!-- The Fix-It Twins -->
       <article class="project-card">
         <div class="project-header fix-it-twins">
           <span class="project-status">In Development</span>
@@ -816,22 +1014,45 @@
           <p class="tagline">"If it's broken, we're on it."</p>
         </div>
         <div class="project-body">
-          <h3>About the Series</h3>
-          <p>
-            When their grandfather hurts his back, 10-year-old twins Emma and Jack Henderson must take over his beloved neighborhood repair shed. With Grandpa Joe guiding them from his recliner, the twins discover that fixing broken toasters, radios, and music boxes teaches them something bigger: how to fix problems, relationships, and themselves.
-          </p>
-
-          <h3>Main Characters</h3>
-          <div class="characters">
-            <span class="character">Emma Henderson (The Doer)</span>
-            <span class="character">Jack Henderson (The Thinker)</span>
-            <span class="character">Grandpa Joe (The Mentor)</span>
+          
+          <div class="logline">
+            "Inventive siblings use creative problem-solving to fix things big and small—inspiring STEM curiosity."
           </div>
 
-          <div class="why-now">
-            <h4>💡 Why This IP Matters Now</h4>
-            <p>STEM education demand is at an all-time high, yet most content focuses on creation over repair. The Fix-It Twins champions "repair culture" and real-world problem-solving—teaching kids that understanding WHY things break is as important as knowing HOW to fix them. Perfect for maker spaces, vocational education partnerships, and STEM curriculum integration.</p>
-            <p class="comparables"><strong>Comparable titles:</strong> Rosie Revere Engineer, Ada Twist Scientist, The Most Magnificent Thing</p>
+          <h3>Overview</h3>
+          <p>
+            The Fix-It Twins inspire curiosity and practical creativity through STEM-focused problem solving. Each story follows inventive siblings who creatively fix and innovate solutions to real-world challenges. With Grandpa Joe guiding them from his recliner, the twins discover that fixing broken things teaches them something bigger: how to fix problems, relationships, and themselves.
+          </p>
+
+          <h3>Key Themes</h3>
+          <div class="themes-list">
+            <span class="theme-tag">STEM Learning</span>
+            <span class="theme-tag">Creative Thinking</span>
+            <span class="theme-tag">Teamwork</span>
+            <span class="theme-tag">Intergenerational Bonds</span>
+          </div>
+
+          <h3>Formats</h3>
+          <div class="formats">
+            <div class="format-item"><span class="icon">📚</span> Book Series</div>
+            <div class="format-item"><span class="icon">▶️</span> YouTube Tutorials</div>
+            <div class="format-item"><span class="icon">🎬</span> Educational Shorts</div>
+            <div class="format-item"><span class="icon">🎓</span> STEM Curriculum</div>
+          </div>
+
+          <div class="why-matters">
+            <h4>💡 Why It Matters</h4>
+            <p>STEM content is in high demand globally. This concept delivers educational value with engaging narrative. The Fix-It Twins champions "repair culture" and real-world problem-solving—teaching kids that understanding WHY things break is as important as knowing HOW to fix them.</p>
+          </div>
+
+          <div class="market-opps">
+            <h4>📈 Market Opportunities</h4>
+            <div class="opps-grid">
+              <div class="opp-item"><span class="check">→</span> STEM learning partners</div>
+              <div class="opp-item"><span class="check">→</span> Licensed playsets & tools</div>
+              <div class="opp-item"><span class="check">→</span> School curriculum integration</div>
+              <div class="opp-item"><span class="check">→</span> Maker space partnerships</div>
+            </div>
           </div>
 
           <div class="dev-status">
@@ -851,8 +1072,13 @@
             </div>
           </div>
 
+          <div class="artwork-placeholder">
+            <div class="icon">🎨</div>
+            <p>Character artwork in development</p>
+          </div>
+
           <div class="project-meta">
-            <span class="meta-tag"><span class="icon">👶</span> Ages 6-10</span>
+            <span class="meta-tag"><span class="icon">👶</span> Ages 6–10</span>
             <span class="meta-tag"><span class="icon">🎓</span> STEM Aligned</span>
             <span class="meta-tag"><span class="icon">✅</span> YouTube Kids Compliant</span>
             <span class="meta-tag"><span class="icon">🔧</span> Maker Culture</span>
@@ -860,7 +1086,7 @@
         </div>
       </article>
 
-      <!-- Recipe Rescue Crew - IN DEVELOPMENT -->
+      <!-- Recipe Rescue Crew -->
       <article class="project-card">
         <div class="project-header recipe-rescue">
           <span class="project-status">In Development</span>
@@ -868,26 +1094,45 @@
           <p class="tagline">"When the recipe goes wrong, we make it right!"</p>
         </div>
         <div class="project-body">
-          <h3>About the Series</h3>
-          <p>
-            When Nana Rosa breaks her arm right before the town's annual food festival, 9-year-old cousins Mia (the rusher) and Theo (the measurer) must recreate her legendary dishes from cryptic recipe cards—with reluctant help from Uncle Ray, who hasn't cooked since he burned ramen in college.
-          </p>
-          <p>
-            Every dish is a disaster before it's a success. Every failure teaches kitchen science. And every recipe reveals a story about where their multicultural family came from.
-          </p>
-
-          <h3>Main Characters</h3>
-          <div class="characters">
-            <span class="character">Mia Santos (The Rusher)</span>
-            <span class="character">Theo Santos (The Measurer)</span>
-            <span class="character">Uncle Ray (The Reluctant Adult)</span>
-            <span class="character">Nana Rosa (The Oracle)</span>
+          
+          <div class="logline">
+            "Kids learn life lessons through food adventures that celebrate culture, science, and family."
           </div>
 
-          <div class="why-now">
-            <h4>💡 Why This IP Matters Now</h4>
-            <p>Kids' cooking content is dominated by competition formats—there's a gap for problem-solving kitchen stories. Recipe Rescue combines kitchen science (chemistry, math) with family heritage and multicultural representation. Natural tie-in potential for cookbooks, food brands, and culinary education programs.</p>
-            <p class="comparables"><strong>Comparable titles:</strong> MasterChef Junior (but collaborative, not competitive), Ratatouille, The Great British Bake Off</p>
+          <h3>Overview</h3>
+          <p>
+            A family-centered IP where young cooks learn traditions, nutrition, and science through playful kitchen adventures. This concept interweaves culture, food, and family bonds into an entertaining and educational experience. Every dish is a disaster before it's a success—and every recipe reveals a story about where their multicultural family came from.
+          </p>
+
+          <h3>Key Themes</h3>
+          <div class="themes-list">
+            <span class="theme-tag">Nutrition Education</span>
+            <span class="theme-tag">Family Heritage & Culture</span>
+            <span class="theme-tag">Collaborative Learning</span>
+            <span class="theme-tag">Kitchen Science</span>
+          </div>
+
+          <h3>Formats</h3>
+          <div class="formats">
+            <div class="format-item"><span class="icon">📚</span> Book Series</div>
+            <div class="format-item"><span class="icon">▶️</span> Video Recipes</div>
+            <div class="format-item"><span class="icon">🍳</span> Branded Cooking Kits</div>
+            <div class="format-item"><span class="icon">📱</span> Interactive Digital Content</div>
+          </div>
+
+          <div class="why-matters">
+            <h4>💡 Why It Matters</h4>
+            <p>Blending nutrition, culture, and entertainment creates broad appeal for kids and parents. Kids' cooking content is dominated by competition formats—there's a gap for problem-solving kitchen stories that combine kitchen science (chemistry, math) with family heritage and multicultural representation.</p>
+          </div>
+
+          <div class="market-opps">
+            <h4>📈 Market Opportunities</h4>
+            <div class="opps-grid">
+              <div class="opp-item"><span class="check">→</span> Branded kid cooking sets</div>
+              <div class="opp-item"><span class="check">→</span> Global cookbook sales</div>
+              <div class="opp-item"><span class="check">→</span> Digital recipe subscription</div>
+              <div class="opp-item"><span class="check">→</span> Video series distribution</div>
+            </div>
           </div>
 
           <div class="dev-status">
@@ -906,8 +1151,13 @@
             </div>
           </div>
 
+          <div class="artwork-placeholder">
+            <div class="icon">🎨</div>
+            <p>Visual artwork in development</p>
+          </div>
+
           <div class="project-meta">
-            <span class="meta-tag"><span class="icon">👶</span> Ages 6-10</span>
+            <span class="meta-tag"><span class="icon">👶</span> Ages 6–12</span>
             <span class="meta-tag"><span class="icon">🌎</span> Multicultural</span>
             <span class="meta-tag"><span class="icon">🔬</span> Kitchen Science</span>
             <span class="meta-tag"><span class="icon">👨‍👩‍👧‍👦</span> Family Heritage</span>
@@ -915,7 +1165,7 @@
         </div>
       </article>
 
-      <!-- Seed Savers Society - IN DEVELOPMENT -->
+      <!-- Seed Savers Society -->
       <article class="project-card">
         <div class="project-header seed-savers">
           <span class="project-status">In Development</span>
@@ -923,26 +1173,45 @@
           <p class="tagline">"Every seed has a story. Every garden has a secret."</p>
         </div>
         <div class="project-body">
-          <h3>About the Series</h3>
-          <p>
-            Eleven-year-old Maya discovers her late grandfather's hidden seed collection and a mysterious journal revealing he was part of a secret network of "Seed Savers" who protect rare and heirloom plants from extinction. Now it's her turn to carry on the mission with her friends.
-          </p>
-          <p>
-            Part mystery, part gardening guide, this series teaches real seed-saving skills while following Maya and her friends as they race to save endangered plant varieties before they're lost forever.
-          </p>
-
-          <h3>Main Characters</h3>
-          <div class="characters">
-            <span class="character">Maya Johnson (The Inheritor)</span>
-            <span class="character">Omar Ahmed (The Researcher)</span>
-            <span class="character">Birdie Nguyen (The Connector)</span>
-            <span class="character">Miss Patrice (The Network Node)</span>
+          
+          <div class="logline">
+            "Young gardeners solve environmental mysteries while learning about ecosystems and biodiversity."
           </div>
 
-          <div class="why-now">
-            <h4>💡 Why This IP Matters Now</h4>
-            <p>Environmental content for kids often feels preachy or doom-focused. Seed Savers makes biodiversity tangible and actionable through mystery and real skills kids can actually learn. Partnership potential with seed libraries, school gardens, and environmental education programs. Urban gardening angle appeals to city families.</p>
-            <p class="comparables"><strong>Comparable titles:</strong> Hoot (Carl Hiaasen), The Wild Robot, National Geographic Kids</p>
+          <h3>Overview</h3>
+          <p>
+            This series teaches children about ecosystems, gardening, and biodiversity through engaging stories of community garden adventures and environmental mysteries. When Maya discovers her late grandfather's hidden seed collection and mysterious journal, she learns he was part of a secret network protecting rare plants from extinction—now it's her turn to carry on the mission.
+          </p>
+
+          <h3>Key Themes</h3>
+          <div class="themes-list">
+            <span class="theme-tag">Environmental Stewardship</span>
+            <span class="theme-tag">Scientific Curiosity</span>
+            <span class="theme-tag">Community Engagement</span>
+            <span class="theme-tag">Biodiversity</span>
+          </div>
+
+          <h3>Formats</h3>
+          <div class="formats">
+            <div class="format-item"><span class="icon">📚</span> Illustrated Books</div>
+            <div class="format-item"><span class="icon">▶️</span> Web Series</div>
+            <div class="format-item"><span class="icon">🎓</span> Educational Guides</div>
+            <div class="format-item"><span class="icon">🎨</span> Graphic Novel Potential</div>
+          </div>
+
+          <div class="why-matters">
+            <h4>💡 Why It Matters</h4>
+            <p>Environmental learning resonates with modern audiences seeking meaningful, eco-centric content for kids. Seed Savers makes biodiversity tangible and actionable through mystery and real skills kids can actually learn. Urban gardening angle appeals to city families.</p>
+          </div>
+
+          <div class="market-opps">
+            <h4>📈 Market Opportunities</h4>
+            <div class="opps-grid">
+              <div class="opp-item"><span class="check">→</span> Gardening toolkits for kids</div>
+              <div class="opp-item"><span class="check">→</span> Educational programs & school partnerships</div>
+              <div class="opp-item"><span class="check">→</span> Branded merchandise</div>
+              <div class="opp-item"><span class="check">→</span> After-school program licensing</div>
+            </div>
           </div>
 
           <div class="dev-status">
@@ -962,8 +1231,13 @@
             </div>
           </div>
 
+          <div class="artwork-placeholder">
+            <div class="icon">🎨</div>
+            <p>Concept artwork in development</p>
+          </div>
+
           <div class="project-meta">
-            <span class="meta-tag"><span class="icon">👶</span> Ages 8-12</span>
+            <span class="meta-tag"><span class="icon">👶</span> Ages 8–12</span>
             <span class="meta-tag"><span class="icon">🔍</span> Mystery Arc</span>
             <span class="meta-tag"><span class="icon">🌿</span> Real Skills</span>
             <span class="meta-tag"><span class="icon">🌍</span> Global Network</span>
@@ -1085,7 +1359,8 @@
   <!-- Enhanced CTA Section -->
   <section class="cta-section">
     <h2>Partner With Us</h2>
-    <p class="subtitle">We're actively seeking licensing, co-production, and distribution partnerships for our portfolio of children's IP.</p>
+    <p class="subtitle">Hatchling Media's portfolio blends creativity, educational value, and cultural richness. Each IP is designed for scalable market placement across traditional and digital platforms.</p>
+    <p class="founder">Founded by Albert Massay</p>
     
     <div class="cta-options">
       <div class="cta-option"><span class="icon">📺</span> Animation & Streaming Rights</div>
@@ -1095,32 +1370,21 @@
     </div>
 
     <div class="cta-buttons">
-      <a href="mailto:contact@hatchlingmedia.com?subject=Partnership%20Inquiry%20-%20Hatchling%20Media" class="cta-button">
-        <span>📩</span> Request Materials
+      <a href="/cdn-cgi/l/email-protection#e78f828b8b88a78f8693848f8b8e89808a82838e86c984888ad89492858d828493dab78e93848fc2d5d7a382848cc2d5d7b5829692829493c2d5d7cac2d5d7af8693848f8b8e8980c2d5d7aa82838e86" class="cta-button">
+        <span>📩</span> Request Pitch Deck
       </a>
-      <a href="mailto:contact@hatchlingmedia.com?subject=Schedule%20Call%20-%20Hatchling%20Media" class="cta-button secondary">
+      <a href="/cdn-cgi/l/email-protection#d8b0bdb4b4b798b0b9acbbb0b4b1b6bfb5bdbcb1b9f6bbb7b5e7abadbab2bdbbace58bbbb0bdbcadb4bdfdeae89bb9b4b4fdeae8f5fdeae890b9acbbb0b4b1b6bffdeae895bdbcb1b9" class="cta-button secondary">
         <span>📞</span> Schedule a Call
       </a>
     </div>
+
+    <p class="cta-email">Or email us directly: <a href="/cdn-cgi/l/email-protection#365e535a5a59765e5742555e5a5f58515b53525f571855595b"><span class="__cf_email__" data-cfemail="3058555c5c5f7058514453585c595e575d555459511e535f5d">[email&#160;protected]</span></a></p>
   </section>
 
   <footer>
     <div class="footer-content">
       <div class="footer-logo">🐣 Hatchling Media</div>
+      <p class="footer-tagline">Stories That Hatch Imaginations</p>
       <nav class="footer-links" aria-label="Footer navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="mailto:contact@hatchlingmedia.com">Contact</a>
-      </nav>
-      <p class="footer-copyright">© 2025 Hatchling Media. All Rights Reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('nav').classList.toggle('open');
-    }
-  </script>
-</body>
-</html>
+        <a hre
