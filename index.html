@@ -3,8 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hatchling Media | Original IP for Children & Family</title>
-  <meta name="description" content="Hatchling Media develops original, creator-led intellectual property for children and family audiences across animation, publishing, and global distribution." />
+  <title>Hatchling Media | Original Stories for Children & Families</title>
+  <meta name="description" content="Hatchling Media creates original, creator-led intellectual property for children and family audiences. Animation, publishing, licensing, and educational content." />
+  <meta name="keywords" content="children's media, kids entertainment, animation, children's books, family content, IP development, educational content" />
+  <meta name="author" content="Hatchling Media" />
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hatchling Media | Original Stories for Children & Families" />
+  <meta property="og:description" content="We ignite young imaginations through joyful, inclusive stories that inspire curiosity, creativity, and connection." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hatchlingmedia.com" />
   
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png">
@@ -13,18 +21,22 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --color-ink: #1a1a1a;
+      --color-primary: #FFD93D;
+      --color-primary-dark: #F5C518;
+      --color-secondary: #6BCB77;
+      --color-accent: #4D96FF;
+      --color-warm: #FF6B6B;
+      --color-ink: #2D3436;
       --color-ink-light: #4a4a4a;
-      --color-ink-muted: #7a7a7a;
+      --color-ink-muted: #636e72;
       --color-paper: #ffffff;
-      --color-paper-warm: #faf9f7;
-      --color-accent: #f5c518;
-      --color-accent-dark: #d4a800;
-      --font-display: 'Playfair Display', Georgia, serif;
+      --color-paper-warm: #FFFDF7;
+      --color-paper-soft: #FFF9E6;
+      --font-display: 'Baloo 2', cursive;
       --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
@@ -50,13 +62,15 @@
 
     /* Header */
     header {
-      padding: 24px 40px;
+      padding: 16px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      position: relative;
-      z-index: 10;
       background: var(--color-paper);
+      border-bottom: 2px solid var(--color-paper-soft);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     .logo {
@@ -66,132 +80,253 @@
     }
 
     .logo img {
-      height: 60px;
+      height: 50px;
       width: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    nav a {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-ink);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--color-accent);
+    }
+
+    nav a.active {
+      color: var(--color-accent);
+    }
+
+    .mobile-menu {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(180deg, var(--color-paper-soft) 0%, var(--color-paper) 100%);
+      padding: 60px 40px 80px;
+      text-align: center;
+    }
+
+    .hero-logo {
+      margin-bottom: 24px;
+    }
+
+    .hero-logo img {
+      max-width: 180px;
+      height: auto;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--color-ink);
+      max-width: 800px;
+      margin: 0 auto 32px;
+    }
+
+    .hero-tagline em {
+      color: var(--color-warm);
+      font-style: normal;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: var(--color-ink-light);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
     }
 
     /* Main Content */
     main {
       flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 40px;
-      background: linear-gradient(180deg, var(--color-paper) 0%, var(--color-paper-warm) 100%);
     }
 
-    .container {
-      max-width: 680px;
-      width: 100%;
+    .section {
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 24px;
       text-align: center;
     }
 
-    .hero-logo {
-      margin-bottom: 32px;
-    }
-
-    .hero-logo img {
-      max-width: 200px;
-      height: auto;
-    }
-
-    .hero-text {
-      font-family: var(--font-display);
-      font-size: clamp(28px, 5vw, 42px);
-      font-weight: 500;
-      line-height: 1.3;
-      margin-bottom: 32px;
-      color: var(--color-ink);
-    }
-
-    .hero-text em {
-      font-style: italic;
-      color: var(--color-accent-dark);
-    }
-
-    .body-text {
-      font-size: 17px;
-      color: var(--color-ink-light);
-      margin-bottom: 20px;
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: left;
+    .section-title span {
+      color: var(--color-accent);
     }
 
     /* Focus Areas */
-    .focus-areas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 36px 0;
-      justify-content: center;
+    .focus-section {
+      background: var(--color-paper-warm);
+      padding: 60px 40px;
     }
 
-    .focus-tag {
-      padding: 8px 18px;
-      background-color: var(--color-paper);
-      border: 1.5px solid #e0e0e0;
-      border-radius: 100px;
-      font-size: 14px;
-      color: var(--color-ink-light);
-      font-weight: 600;
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: 0 auto;
     }
 
-    /* Contact Section */
-    .contact-section {
-      margin-top: 48px;
-      padding-top: 36px;
-      border-top: 1px solid #e8e8e8;
+    .focus-card {
+      background: var(--color-paper);
+      padding: 24px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .contact-label {
-      font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      color: var(--color-ink-muted);
-      margin-bottom: 10px;
-      font-weight: 700;
+    .focus-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     }
 
-    .contact-email {
-      font-family: var(--font-body);
+    .focus-icon {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .focus-card h3 {
+      font-family: var(--font-display);
       font-size: 18px;
       font-weight: 600;
       color: var(--color-ink);
-      text-decoration: none;
-      border-bottom: 2px solid transparent;
-      transition: all 0.2s ease;
     }
 
-    .contact-email:hover {
-      color: var(--color-accent-dark);
-      border-bottom-color: var(--color-accent);
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-accent) 0%, #6B8DD6 100%);
+      padding: 60px 40px;
+      text-align: center;
+      color: white;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      margin-bottom: 24px;
+      opacity: 0.95;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: var(--color-accent);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     /* Footer */
     footer {
-      padding: 28px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 13px;
-      color: var(--color-ink-muted);
-      background: var(--color-paper-warm);
-      border-top: 1px solid #eee;
+      background: var(--color-ink);
+      color: white;
+      padding: 40px;
+      text-align: center;
     }
 
-    .footer-left {
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .social-links a {
       display: flex;
       align-items: center;
-      gap: 16px;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
     }
 
     /* Animation */
     @keyframes fadeInUp {
       from {
         opacity: 0;
-        transform: translateY(16px);
+        transform: translateY(20px);
       }
       to {
         opacity: 1;
@@ -199,122 +334,147 @@
       }
     }
 
-    .hero-logo {
-      animation: fadeInUp 0.6s ease-out;
+    .hero-logo, .hero-tagline, .hero-subtitle {
+      animation: fadeInUp 0.6s ease-out both;
     }
 
-    .hero-text {
-      animation: fadeInUp 0.6s ease-out 0.1s;
-      animation-fill-mode: both;
-    }
-
-    .body-text {
-      animation: fadeInUp 0.6s ease-out;
-      animation-fill-mode: both;
-    }
-
-    .body-text:nth-of-type(1) { animation-delay: 0.2s; }
-    .body-text:nth-of-type(2) { animation-delay: 0.3s; }
-
-    .focus-areas {
-      animation: fadeInUp 0.6s ease-out 0.4s;
-      animation-fill-mode: both;
-    }
-
-    .contact-section {
-      animation: fadeInUp 0.6s ease-out 0.5s;
-      animation-fill-mode: both;
-    }
+    .hero-tagline { animation-delay: 0.1s; }
+    .hero-subtitle { animation-delay: 0.2s; }
 
     /* Responsive */
-    @media (max-width: 640px) {
+    @media (max-width: 768px) {
       header {
-        padding: 20px 24px;
+        padding: 16px 20px;
       }
 
-      .logo img {
-        height: 48px;
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       }
 
-      main {
-        padding: 32px 24px;
+      nav.open {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .hero {
+        padding: 40px 20px 60px;
       }
 
       .hero-logo img {
-        max-width: 150px;
+        max-width: 140px;
+      }
+
+      .section {
+        padding: 40px 20px;
+      }
+
+      .focus-section {
+        padding: 40px 20px;
+      }
+
+      .cta-section {
+        padding: 40px 20px;
       }
 
       footer {
-        padding: 20px 24px;
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-      }
-
-      .footer-left {
-        flex-direction: column;
-        gap: 4px;
-      }
-
-      .contact-email {
-        font-size: 16px;
+        padding: 32px 20px;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    <a href="/" class="logo">
+    <a href="index.html" class="logo">
       <img src="Hatchling_Media.png" alt="Hatchling Media">
     </a>
+    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+    <nav id="nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="mailto:contact@hatchlingmedia.com">Contact</a>
+    </nav>
   </header>
 
-  <main>
-    <div class="container">
-      <div class="hero-logo">
-        <img src="Hatchling_Media.png" alt="Hatchling Media - A chick hatching from an egg">
-      </div>
-
-      <h1 class="hero-text">
-        Original stories for <em>children & families</em>
-      </h1>
-
-      <p class="body-text">
-        Hatchling Media is an independent content company focused on the creation 
-        and development of original, creator-led intellectual property for 
-        children and family audiences.
-      </p>
-
-      <p class="body-text">
-        We develop narrative-driven franchises designed for animation, publishing, 
-        and global distribution—working with established production studios and 
-        partners on a selective, project-by-project basis.
-      </p>
-
-      <div class="focus-areas">
-        <span class="focus-tag">Animation Development</span>
-        <span class="focus-tag">Children's Publishing</span>
-        <span class="focus-tag">IP Licensing</span>
-        <span class="focus-tag">IP Sales</span>
-        <span class="focus-tag">Educational Content</span>
-      </div>
-
-      <div class="contact-section">
-        <p class="contact-label">Business Inquiries</p>
-        <a href="mailto:contact@hatchlingmedia.com" class="contact-email">
-          contact@hatchlingmedia.com
-        </a>
-      </div>
+  <section class="hero">
+    <div class="hero-logo">
+      <img src="Hatchling_Media.png" alt="Hatchling Media - A chick hatching from an egg">
     </div>
+    <h1 class="hero-tagline">
+      At Hatchling Media, we ignite young imaginations through <em>joyful, inclusive stories</em> that inspire curiosity, creativity, and connection for children and families everywhere.
+    </h1>
+    <p class="hero-subtitle">
+      We're an independent content company focused on the creation and development of original, creator-led intellectual property for children and family audiences.
+    </p>
+  </section>
+
+  <main>
+    <section class="focus-section">
+      <h2 class="section-title">What We <span>Do</span></h2>
+      <div class="focus-grid">
+        <div class="focus-card">
+          <div class="focus-icon">🎬</div>
+          <h3>Animation Development</h3>
+        </div>
+        <div class="focus-card">
+          <div class="focus-icon">📚</div>
+          <h3>Children's Publishing</h3>
+        </div>
+        <div class="focus-card">
+          <div class="focus-icon">🎨</div>
+          <h3>IP Licensing</h3>
+        </div>
+        <div class="focus-card">
+          <div class="focus-icon">💼</div>
+          <h3>IP Sales</h3>
+        </div>
+        <div class="focus-card">
+          <div class="focus-icon">🎓</div>
+          <h3>Educational Content</h3>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <h2>Let's Create Something Wonderful</h2>
+      <p>Interested in licensing, creative collaboration, or partnership opportunities?</p>
+      <a href="mailto:contact@hatchlingmedia.com" class="cta-button">Get In Touch</a>
+    </section>
   </main>
 
   <footer>
-    <div class="footer-left">
-      <span>© 2025 Hatchling Media</span>
-      <span>•</span>
-      <span>All Rights Reserved</span>
+    <div class="footer-content">
+      <div class="footer-logo">🐣 Hatchling Media</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="mailto:contact@hatchlingmedia.com">Contact</a>
+      </div>
+      <div class="social-links">
+        <a href="#" title="YouTube">▶</a>
+        <a href="#" title="Instagram">📷</a>
+      </div>
+      <p class="footer-copyright">© 2025 Hatchling Media. All Rights Reserved.</p>
     </div>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('open');
+    }
+  </script>
 </body>
 </html>
-

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Hatchling Media</title>
+  <meta name="description" content="Learn about Hatchling Media's mission to spark imagination and joy in children and families through original, culturally rooted storytelling." />
+  <meta name="keywords" content="children's media, kids entertainment, animation, children's books, family content, about us" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #FFD93D;
+      --color-primary-dark: #F5C518;
+      --color-secondary: #6BCB77;
+      --color-accent: #4D96FF;
+      --color-warm: #FF6B6B;
+      --color-ink: #2D3436;
+      --color-ink-light: #4a4a4a;
+      --color-ink-muted: #636e72;
+      --color-paper: #ffffff;
+      --color-paper-warm: #FFFDF7;
+      --color-paper-soft: #FFF9E6;
+      --font-display: 'Baloo 2', cursive;
+      --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-paper);
+      color: var(--color-ink);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--color-paper);
+      border-bottom: 2px solid var(--color-paper-soft);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    nav a {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-ink);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--color-accent);
+    }
+
+    .mobile-menu {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(180deg, var(--color-paper-soft) 0%, var(--color-paper) 100%);
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 span {
+      color: var(--color-accent);
+    }
+
+    .page-header p {
+      font-size: 18px;
+      color: var(--color-ink-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 40px;
+    }
+
+    .content-section {
+      margin-bottom: 48px;
+    }
+
+    .content-section h2 {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .content-section h2 .icon {
+      font-size: 28px;
+    }
+
+    .content-section p {
+      font-size: 16px;
+      color: var(--color-ink-light);
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    /* What We Do List */
+    .what-we-do {
+      background: var(--color-paper-warm);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 24px 0;
+    }
+
+    .what-we-do ul {
+      list-style: none;
+      display: grid;
+      gap: 16px;
+    }
+
+    .what-we-do li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 16px;
+      color: var(--color-ink-light);
+    }
+
+    .what-we-do li .icon {
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    /* Values */
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .value-item {
+      background: var(--color-paper-soft);
+      padding: 20px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .value-item .icon {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .value-item p {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-ink);
+      margin: 0;
+    }
+
+    /* Highlight Box */
+    .highlight-box {
+      background: linear-gradient(135deg, var(--color-accent) 0%, #6B8DD6 100%);
+      color: white;
+      padding: 32px;
+      border-radius: 16px;
+      margin: 32px 0;
+    }
+
+    .highlight-box h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+
+    .highlight-box p {
+      color: rgba(255,255,255,0.95);
+      margin: 0;
+    }
+
+    /* Contact Section */
+    .contact-box {
+      background: var(--color-paper-warm);
+      padding: 32px;
+      border-radius: 16px;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    .contact-box h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+    }
+
+    .contact-box p {
+      color: var(--color-ink-light);
+      margin-bottom: 20px;
+    }
+
+    .contact-box a.email {
+      display: inline-block;
+      background: var(--color-accent);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .contact-box a.email:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(77, 150, 255, 0.3);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--color-ink);
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 20px;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .page-header {
+        padding: 40px 20px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      .what-we-do {
+        padding: 24px;
+      }
+
+      .contact-box {
+        padding: 24px;
+      }
+
+      footer {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="Hatchling_Media.png" alt="Hatchling Media">
+    </a>
+    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="mailto:contact@hatchlingmedia.com">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>About <span>Hatchling Media</span></h1>
+    <p>Sparking imagination and joy through original storytelling</p>
+  </section>
+
+  <main>
+    <section class="content-section">
+      <h2><span class="icon">🎯</span> Our Mission</h2>
+      <p>
+        At Hatchling Media, our mission is to spark imagination and joy in children and families through original, culturally rooted storytelling and creative media experiences. We create characters, worlds, and stories that entertain, educate, and uplift young audiences — with heart, humor, and purpose.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2><span class="icon">📖</span> Our Story</h2>
+      <p>
+        Hatchling Media began with a simple idea: children deserve stories that reflect their world, speak to their curiosity, and celebrate diverse voices. Born from a passion for kids' storytelling and authentic character-driven content, we set out to build creator-led intellectual property that resonates with young minds and the grownups who support them.
+      </p>
+      <p>
+        Whether it's animated series concepts, children's books, educational shorts, or cross-platform media, every story we make is rooted in care, creativity, and community.
+      </p>
+    </section>
+
+    <section class="content-section">
+      <h2><span class="icon">🛠️</span> What We Do</h2>
+      <p>We develop and produce:</p>
+      <div class="what-we-do">
+        <ul>
+          <li><span class="icon">🎨</span> Original animated content for kids and families</li>
+          <li><span class="icon">📖</span> Story-driven publishing (books, guides, curriculum)</li>
+          <li><span class="icon">🎬</span> Creative collaboration with educators, partners, and broadcasters</li>
+          <li><span class="icon">📡</span> Licensing & distribution of family-friendly IP</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <h2><span class="icon">💎</span> Our Values</h2>
+      <p>We believe in:</p>
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="icon">🌈</div>
+          <p>Inclusive and joyful storytelling</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">✨</div>
+          <p>Creativity without compromise</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">🗣️</div>
+          <p>Empowering young voices</p>
+        </div>
+        <div class="value-item">
+          <div class="icon">🎁</div>
+          <p>Media that entertains and enriches</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="highlight-box">
+      <h3>💡 Why It Matters</h3>
+      <p>
+        In a world crowded with content, Hatchling Media focuses on meaningful creativity — stories that leave a smile, a lesson, or a spark of wonder. We want every child who encounters our work to feel seen, inspired, and eager to explore.
+      </p>
+    </div>
+
+    <section class="content-section">
+      <h2><span class="icon">👥</span> Our Approach</h2>
+      <p>
+        We're a dedicated team of writers, creators, educators, and storytellers united by one purpose: to make media that matters. We combine experience in children's entertainment, developmental learning, and cultural representation to build content that's as smart as it is fun.
+      </p>
+    </section>
+
+    <div class="contact-box">
+      <h3>Get Involved</h3>
+      <p>
+        If you're interested in licensing, creative collaboration, or just want to say hello, we'd love to hear from you.
+      </p>
+      <a href="mailto:contact@hatchlingmedia.com" class="email">contact@hatchlingmedia.com</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">🐣 Hatchling Media</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="mailto:contact@hatchlingmedia.com">Contact</a>
+      </div>
+      <p class="footer-copyright">© 2025 Hatchling Media. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Hatchling Media</title>
+  <meta name="description" content="Explore Hatchling Media's original children's properties including The Fix-It Twins and Speedeet & Wilar series." />
+  <meta name="keywords" content="children's media, kids shows, animation, children's books, The Fix-It Twins, Speedeet and Wilar" />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Baloo+2:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --color-primary: #FFD93D;
+      --color-primary-dark: #F5C518;
+      --color-secondary: #6BCB77;
+      --color-accent: #4D96FF;
+      --color-warm: #FF6B6B;
+      --color-orange: #FF9F43;
+      --color-purple: #A55EEA;
+      --color-ink: #2D3436;
+      --color-ink-light: #4a4a4a;
+      --color-ink-muted: #636e72;
+      --color-paper: #ffffff;
+      --color-paper-warm: #FFFDF7;
+      --color-paper-soft: #FFF9E6;
+      --font-display: 'Baloo 2', cursive;
+      --font-body: 'Nunito', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--color-paper);
+      color: var(--color-ink);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      padding: 16px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--color-paper);
+      border-bottom: 2px solid var(--color-paper-soft);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    nav a {
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-ink);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover, nav a.active {
+      color: var(--color-accent);
+    }
+
+    .mobile-menu {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Page Header */
+    .page-header {
+      background: linear-gradient(180deg, var(--color-paper-soft) 0%, var(--color-paper) 100%);
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .page-header h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: var(--color-ink);
+      margin-bottom: 16px;
+    }
+
+    .page-header h1 span {
+      color: var(--color-accent);
+    }
+
+    .page-header p {
+      font-size: 18px;
+      color: var(--color-ink-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      padding: 60px 40px;
+    }
+
+    /* Project Cards */
+    .projects-grid {
+      display: grid;
+      gap: 48px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .project-card {
+      background: var(--color-paper);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.12);
+    }
+
+    .project-header {
+      padding: 32px;
+      color: white;
+      position: relative;
+    }
+
+    .project-header.fix-it-twins {
+      background: linear-gradient(135deg, var(--color-orange) 0%, var(--color-warm) 100%);
+    }
+
+    .project-header.speedeet {
+      background: linear-gradient(135deg, var(--color-secondary) 0%, #20BF6B 100%);
+    }
+
+    .project-status {
+      display: inline-block;
+      background: rgba(255,255,255,0.25);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .project-header h2 {
+      font-family: var(--font-display);
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .project-header .tagline {
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    .project-body {
+      padding: 32px;
+    }
+
+    .project-body h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+      margin-top: 24px;
+    }
+
+    .project-body h3:first-child {
+      margin-top: 0;
+    }
+
+    .project-body p {
+      font-size: 15px;
+      color: var(--color-ink-light);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-paper-soft);
+      padding: 8px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-ink-light);
+    }
+
+    .meta-tag .icon {
+      font-size: 14px;
+    }
+
+    /* Characters List */
+    .characters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .character {
+      background: var(--color-paper-warm);
+      padding: 6px 12px;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-ink);
+    }
+
+    /* Formats */
+    .formats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .format-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--color-ink-light);
+    }
+
+    .format-item .icon {
+      font-size: 18px;
+    }
+
+    /* Coming Soon Section */
+    .coming-soon {
+      background: var(--color-paper-warm);
+      border-radius: 16px;
+      padding: 48px;
+      text-align: center;
+      max-width: 900px;
+      margin: 48px auto 0;
+    }
+
+    .coming-soon h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      color: var(--color-ink);
+      margin-bottom: 12px;
+    }
+
+    .coming-soon p {
+      color: var(--color-ink-light);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* CTA */
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-accent) 0%, #6B8DD6 100%);
+      padding: 60px 40px;
+      text-align: center;
+      color: white;
+      margin-top: 60px;
+    }
+
+    .cta-section h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 17px;
+      margin-bottom: 24px;
+      opacity: 0.95;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: var(--color-accent);
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--color-ink);
+      color: white;
+      padding: 40px;
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      font-family: var(--font-display);
+      font-size: 24px;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .footer-copyright {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header {
+        padding: 16px 20px;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .page-header {
+        padding: 40px 20px;
+      }
+
+      main {
+        padding: 40px 20px;
+      }
+
+      .project-header {
+        padding: 24px;
+      }
+
+      .project-body {
+        padding: 24px;
+      }
+
+      .project-header h2 {
+        font-size: 26px;
+      }
+
+      .coming-soon {
+        padding: 32px 24px;
+      }
+
+      .cta-section {
+        padding: 40px 20px;
+      }
+
+      footer {
+        padding: 32px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo">
+      <img src="Hatchling_Media.png" alt="Hatchling Media">
+    </a>
+    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+    <nav id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="mailto:contact@hatchlingmedia.com">Contact</a>
+    </nav>
+  </header>
+
+  <section class="page-header">
+    <h1>Our <span>Projects</span></h1>
+    <p>Original stories and characters created with heart, humor, and purpose</p>
+  </section>
+
+  <main>
+    <div class="projects-grid">
+      
+      <!-- The Fix-It Twins -->
+      <article class="project-card">
+        <div class="project-header fix-it-twins">
+          <span class="project-status">In Development</span>
+          <h2>🔧 The Fix-It Twins</h2>
+          <p class="tagline">"If it's broken, we're on it."</p>
+        </div>
+        <div class="project-body">
+          <h3>About the Series</h3>
+          <p>
+            When their grandfather hurts his back, 10-year-old twins Emma and Jack Henderson must take over his beloved neighborhood repair shed. With Grandpa Joe guiding them from his recliner, the twins discover that fixing broken toasters, radios, and music boxes teaches them something bigger: how to fix problems, relationships, and themselves.
+          </p>
+          <p>
+            A heartwarming STEM-focused series that celebrates repair culture, intergenerational wisdom, and the power of learning through failure.
+          </p>
+
+          <h3>Main Characters</h3>
+          <div class="characters">
+            <span class="character">Emma Henderson (The Doer)</span>
+            <span class="character">Jack Henderson (The Thinker)</span>
+            <span class="character">Grandpa Joe (The Mentor)</span>
+          </div>
+
+          <h3>Key Themes</h3>
+          <p>Problem-solving • Learning from failure • Intergenerational bonds • Community • Real skills over magic solutions</p>
+
+          <h3>Available Formats</h3>
+          <div class="formats">
+            <div class="format-item"><span class="icon">📚</span> Chapter Books</div>
+            <div class="format-item"><span class="icon">🎬</span> Animation Bible</div>
+            <div class="format-item"><span class="icon">🎓</span> STEM Curriculum</div>
+            <div class="format-item"><span class="icon">▶️</span> YouTube Series</div>
+          </div>
+
+          <div class="project-meta">
+            <span class="meta-tag"><span class="icon">👶</span> Ages 6-10</span>
+            <span class="meta-tag"><span class="icon">📖</span> Book 1 Complete</span>
+            <span class="meta-tag"><span class="icon">✅</span> YouTube Kids Compliant</span>
+            <span class="meta-tag"><span class="icon">🎓</span> STEM Aligned</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Speedeet & Wilar -->
+      <article class="project-card">
+        <div class="project-header speedeet">
+          <span class="project-status">Published</span>
+          <h2>🏃 Speedeet & Wilar</h2>
+          <p class="tagline">Caribbean adventures with heart and humor</p>
+        </div>
+        <div class="project-body">
+          <h3>About the Series</h3>
+          <p>
+            Follow best friends Speedeet and Wilar, two 12-year-old boys from Pike Street in Kitty, Georgetown, Guyana, as they navigate childhood adventures with wit, mischief, and genuine friendship. Written in authentic Guyanese Creolese, these stories celebrate Caribbean culture and the universal experience of growing up.
+          </p>
+          <p>
+            The series includes both hometown adventures in Guyana and an expanding "Caribbean Adventures" collection featuring Jamaica, Trinidad, and more.
+          </p>
+
+          <h3>Main Characters</h3>
+          <div class="characters">
+            <span class="character">Speedeet</span>
+            <span class="character">Wilar</span>
+            <span class="character">Ma</span>
+            <span class="character">Aunty Devi</span>
+            <span class="character">Lil Suzie</span>
+            <span class="character">Old Man Doodnauth</span>
+          </div>
+
+          <h3>Key Themes</h3>
+          <p>Friendship • Caribbean culture • Growing up • Family • Adventure • Cultural pride</p>
+
+          <h3>Available Formats</h3>
+          <div class="formats">
+            <div class="format-item"><span class="icon">📚</span> Children's Books (Amazon)</div>
+            <div class="format-item"><span class="icon">▶️</span> YouTube Series</div>
+            <div class="format-item"><span class="icon">🎬</span> Animation Ready</div>
+          </div>
+
+          <div class="project-meta">
+            <span class="meta-tag"><span class="icon">👶</span> Ages 8-12</span>
+            <span class="meta-tag"><span class="icon">📖</span> Multiple Books Published</span>
+            <span class="meta-tag"><span class="icon">🌴</span> Caribbean Setting</span>
+            <span class="meta-tag"><span class="icon">🗣️</span> Creolese Dialogue</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="coming-soon">
+      <h3>🐣 More Stories Hatching Soon</h3>
+      <p>We're always developing new characters and worlds. Stay tuned for upcoming announcements!</p>
+    </div>
+  </main>
+
+  <section class="cta-section">
+    <h2>Interested in Our Properties?</h2>
+    <p>We're open to licensing, co-production, and distribution partnerships.</p>
+    <a href="mailto:contact@hatchlingmedia.com" class="cta-button">Let's Talk</a>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">🐣 Hatchling Media</div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="mailto:contact@hatchlingmedia.com">Contact</a>
+      </div>
+      <p class="footer-copyright">© 2025 Hatchling Media. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('nav').classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
