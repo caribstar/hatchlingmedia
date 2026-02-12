@@ -1,967 +1,339 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IP Portfolio | Hatchling Media</title>
-  <meta name="description" content="Explore Hatchling Media's complete intellectual property portfolio — 15 original properties across children's media, adult fiction, audio drama, and nonfiction. Available for licensing, co-production, and distribution partnerships." />
-  <link rel="icon" href="Hatchling_Media.png" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Complete IP portfolio: 8 published children's books, 7 completed novels, 7 television packages. All creator-owned, all adaptation-ready.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <style>
     :root {
-      --navy: #0f1628;
-      --navy-mid: #1a2340;
-      --navy-light: #243054;
-      --gold: #c9a84c;
-      --gold-light: #e8d49a;
-      --gold-dark: #a68a3a;
-      --cream: #faf8f3;
-      --white: #ffffff;
-      --gray-100: #f4f4f6;
-      --gray-200: #e2e3e8;
-      --gray-400: #9498a4;
-      --gray-600: #5a5e6b;
-      --gray-800: #2e3140;
-      --green: #2d6a4f;
-      --green-light: #e8f5ee;
-      --blue: #1d3557;
-      --blue-light: #e8eef5;
-      --amber: #b8860b;
-      --amber-light: #fff8e7;
-      --red: #8b2635;
-      --red-light: #fceef0;
-      --purple: #5b3a7a;
-      --purple-light: #f3eef8;
-      --teal: #1a7a6d;
-      --teal-light: #e8f6f4;
-      --font-display: 'Playfair Display', Georgia, serif;
-      --font-body: 'DM Sans', system-ui, sans-serif;
+      --color-bg: #FAFAF8;
+      --color-text: #1A1A1A;
+      --color-text-secondary: #555;
+      --color-accent: #2A6B4A;
+      --color-accent-light: #E8F3ED;
+      --color-accent-dark: #1E5438;
+      --color-border: #E0E0D8;
+      --color-card: #FFFFFF;
+      --font-heading: 'Georgia', serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.7; }
+    a { color: var(--color-accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid var(--color-border); background: #fff; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-text); }
+    .logo img { height: 48px; }
+    .logo-text { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; }
+    nav { display: flex; gap: 28px; align-items: center; }
+    nav a { font-size: 0.9rem; color: var(--color-text-secondary); text-decoration: none; }
+    nav a:hover, nav a.active { color: var(--color-accent); }
+    .nav-cta { background: var(--color-accent); color: #fff !important; padding: 8px 20px; border-radius: 6px; font-size: 0.85rem; }
+    .nav-cta:hover { background: var(--color-accent-dark); text-decoration: none; }
+    .mobile-menu { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
 
-    body {
-      font-family: var(--font-body);
-      color: var(--gray-800);
-      background: var(--cream);
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-    }
+    .page-header { text-align: center; padding: 72px 48px 48px; }
+    .page-header h1 { font-family: var(--font-heading); font-size: 2.4rem; margin-bottom: 12px; }
+    .page-header p { color: var(--color-text-secondary); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
 
-    /* ===== HEADER ===== */
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: var(--navy);
-      border-bottom: 1px solid rgba(201,168,76,0.15);
-    }
-    .header-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 72px;
-    }
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-      text-decoration: none;
-      color: var(--white);
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.15rem;
-      letter-spacing: 0.01em;
-    }
-    .logo img { height: 48px; width: auto; }
-    nav { display: flex; gap: 2rem; align-items: center; }
-    nav a {
-      text-decoration: none;
-      color: var(--gray-400);
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: color 0.2s;
-      letter-spacing: 0.02em;
-    }
-    nav a:hover, nav a.active { color: var(--gold); }
-    .mobile-toggle { display: none; background: none; border: none; color: var(--white); font-size: 1.5rem; cursor: pointer; }
+    main { max-width: 960px; margin: 0 auto; padding: 0 32px 80px; }
 
-    /* ===== HERO ===== */
-    .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 60%, var(--navy-light) 100%);
-      padding: 5rem 2rem 4rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at 30% 20%, rgba(201,168,76,0.06) 0%, transparent 60%),
-                  radial-gradient(ellipse at 70% 80%, rgba(201,168,76,0.04) 0%, transparent 50%);
-    }
-    .hero-content { position: relative; max-width: 800px; margin: 0 auto; }
-    .hero-label {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1.25rem;
-      padding: 0.35rem 1rem;
-      border: 1px solid rgba(201,168,76,0.3);
-      border-radius: 2px;
-    }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      color: var(--white);
-      line-height: 1.2;
-      margin-bottom: 1.25rem;
-    }
-    .hero p {
-      font-size: 1.1rem;
-      color: var(--gray-400);
-      max-width: 600px;
-      margin: 0 auto 2rem;
-      line-height: 1.7;
-    }
-    .hero-stats {
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      flex-wrap: wrap;
-    }
-    .stat { text-align: center; }
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 700;
-      color: var(--gold);
-      display: block;
-    }
-    .stat-label {
-      font-size: 0.78rem;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      font-weight: 500;
-    }
+    .category-header { font-family: var(--font-heading); font-size: 1.5rem; margin-top: 48px; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 2px solid var(--color-accent-light); }
+    .category-sub { color: var(--color-text-secondary); font-size: 0.92rem; margin-bottom: 24px; }
 
-    /* ===== MAIN ===== */
-    main { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+    .ip-entry { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 10px; padding: 32px; margin-bottom: 20px; }
+    .ip-entry-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; flex-wrap: wrap; gap: 8px; }
+    .ip-entry h3 { font-family: var(--font-heading); font-size: 1.15rem; }
+    .status-tag { font-size: 0.72rem; font-weight: 600; padding: 3px 12px; border-radius: 12px; white-space: nowrap; }
+    .status-published { background: #D4EDDA; color: #155724; }
+    .status-submitted { background: #FFF3CD; color: #856404; }
+    .status-complete { background: #D1ECF1; color: #0C5460; }
+    .status-dev { background: #F0F0F0; color: #666; }
+    .ip-genre { font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 12px; }
+    .ip-logline { font-style: italic; color: var(--color-text-secondary); font-size: 0.95rem; margin-bottom: 16px; }
+    .ip-details { font-size: 0.88rem; color: var(--color-text-secondary); margin-bottom: 16px; }
+    .ip-details strong { color: var(--color-text); }
+    .ip-assets { display: flex; flex-wrap: wrap; gap: 6px; }
+    .asset-tag { background: var(--color-accent-light); color: var(--color-accent); font-size: 0.72rem; font-weight: 500; padding: 3px 10px; border-radius: 12px; }
 
-    /* ===== CATEGORY SECTIONS ===== */
-    .category {
-      padding: 4rem 0 2rem;
-    }
-    .category-header {
-      display: flex;
-      align-items: baseline;
-      gap: 1rem;
-      margin-bottom: 0.5rem;
-    }
-    .category h2 {
-      font-family: var(--font-display);
-      font-size: 1.75rem;
-      color: var(--navy);
-    }
-    .category-count {
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-    .category-desc {
-      color: var(--gray-600);
-      font-size: 0.95rem;
-      margin-bottom: 2.5rem;
-      max-width: 700px;
-    }
+    footer { border-top: 1px solid var(--color-border); background: #fff; padding: 40px 48px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .footer-brand { display: flex; align-items: center; gap: 10px; }
+    .footer-brand img { height: 32px; }
+    .footer-brand span { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 600; }
+    .footer-nav { display: flex; gap: 24px; }
+    .footer-nav a { font-size: 0.85rem; color: var(--color-text-secondary); text-decoration: none; }
+    .footer-nav a:hover { color: var(--color-accent); }
+    .footer-legal { font-size: 0.8rem; color: #999; }
 
-    /* ===== IP CARDS ===== */
-    .ip-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-      gap: 1.75rem;
-    }
-    .ip-card {
-      background: var(--white);
-      border-radius: 8px;
-      border: 1px solid var(--gray-200);
-      overflow: hidden;
-      transition: transform 0.25s ease, box-shadow 0.25s ease;
-    }
-    .ip-card:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 40px rgba(15,22,40,0.08);
-    }
-    .ip-card-top {
-      padding: 1.75rem 1.75rem 0;
-    }
-    .ip-card-meta {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 1rem;
-    }
-    .ip-badge {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.7rem;
-      border-radius: 3px;
-    }
-    .badge-published { background: var(--green-light); color: var(--green); }
-    .badge-complete { background: var(--blue-light); color: var(--blue); }
-    .badge-development { background: var(--amber-light); color: var(--amber); }
-    .badge-concept { background: var(--gray-100); color: var(--gray-600); }
-    .badge-locked { background: var(--purple-light); color: var(--purple); }
-    .badge-active { background: var(--teal-light); color: var(--teal); }
-
-    .ip-type {
-      font-size: 0.72rem;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 500;
-    }
-    .ip-card h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      color: var(--navy);
-      margin-bottom: 0.6rem;
-    }
-    .ip-logline {
-      font-size: 0.92rem;
-      color: var(--gray-600);
-      line-height: 1.65;
-      font-style: italic;
-      margin-bottom: 1.25rem;
-    }
-    .ip-details {
-      padding: 0 1.75rem 1.75rem;
-    }
-    .ip-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin-bottom: 1.25rem;
-    }
-    .ip-tag {
-      font-size: 0.75rem;
-      font-weight: 500;
-      color: var(--gray-600);
-      background: var(--gray-100);
-      padding: 0.25rem 0.6rem;
-      border-radius: 3px;
-    }
-    .ip-assets {
-      border-top: 1px solid var(--gray-200);
-      padding-top: 1.25rem;
-    }
-    .ip-assets-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: var(--gray-400);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 0.6rem;
-    }
-    .ip-asset-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-    }
-    .ip-asset {
-      font-size: 0.72rem;
-      color: var(--navy-mid);
-      background: rgba(15,22,40,0.04);
-      padding: 0.2rem 0.55rem;
-      border-radius: 2px;
-      font-weight: 500;
-    }
-    .ip-audience {
-      margin-top: 1rem;
-      font-size: 0.78rem;
-      color: var(--gray-400);
-    }
-    .ip-audience strong {
-      color: var(--gray-600);
-      font-weight: 600;
-    }
-
-    /* ===== CTA STRIP ===== */
-    .cta-strip {
-      background: var(--navy);
-      border-radius: 8px;
-      padding: 3.5rem;
-      text-align: center;
-      margin: 4rem 0;
-    }
-    .cta-strip h2 {
-      font-family: var(--font-display);
-      color: var(--white);
-      font-size: 1.75rem;
-      margin-bottom: 0.75rem;
-    }
-    .cta-strip p {
-      color: var(--gray-400);
-      font-size: 0.95rem;
-      margin-bottom: 2rem;
-      max-width: 550px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .btn-primary {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      padding: 0.85rem 2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 700;
-      font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      transition: background 0.2s;
-    }
-    .btn-primary:hover { background: var(--gold-light); }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--navy);
-      border-top: 1px solid rgba(201,168,76,0.15);
-      padding: 2.5rem 2rem;
-    }
-    .footer-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1.5rem;
-    }
-    .footer-brand {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      color: var(--white);
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.95rem;
-    }
-    .footer-brand img { height: 32px; width: auto; }
-    .footer-nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
-    .footer-nav a {
-      color: var(--gray-400);
-      text-decoration: none;
-      font-size: 0.82rem;
-      transition: color 0.2s;
-    }
-    .footer-nav a:hover { color: var(--gold); }
-    .footer-legal {
-      width: 100%;
-      text-align: center;
-      color: var(--gray-400);
-      font-size: 0.75rem;
-      margin-top: 1rem;
-      padding-top: 1rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-    }
-
-    /* ===== MOBILE ===== */
     @media (max-width: 768px) {
-      nav { display: none; }
-      .mobile-toggle { display: block; }
-      .hero { padding: 3.5rem 1.5rem 3rem; }
-      .hero-stats { gap: 1.5rem; }
-      .ip-grid { grid-template-columns: 1fr; }
-      .cta-strip { padding: 2.5rem 1.5rem; margin: 3rem 0; }
-      .category { padding: 3rem 0 1.5rem; }
+      header { padding: 16px 20px; }
+      .mobile-menu { display: block; }
+      nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 20px; border-bottom: 1px solid var(--color-border); gap: 16px; }
+      nav.open { display: flex; }
+      .page-header { padding: 48px 20px 32px; }
+      .page-header h1 { font-size: 1.8rem; }
+      main { padding: 0 20px 60px; }
+      footer { padding: 32px 20px; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 16px; }
+      .footer-nav { flex-wrap: wrap; justify-content: center; }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <div class="header-inner">
-      <a href="index.html" class="logo">
-        <img src="Hatchling_Media.png" alt="Hatchling Media logo" />
-        Hatchling Media
-      </a>
-      <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
-      <nav aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="portfolio.html" class="active">IP Portfolio</a>
-        <a href="slate.html">Development Slate</a>
-        <a href="studio.html">Studio</a>
-        <a href="mailto:albert.massay@hatchlingmedia.com">Contact</a>
-      </nav>
-    </div>
+    <a href="index.html" class="logo">
+      <img src="Hatchling_Media.png" alt="Hatchling Media logo">
+      <span class="logo-text">Hatchling Media</span>
+    </a>
+    <button class="mobile-menu" onclick="document.getElementById('nav').classList.toggle('open')" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html" class="active">IP Portfolio</a>
+      <a href="slate.html">Development Slate</a>
+      <a href="studio.html">Studio</a>
+      <a href="mailto:albert.massay@hatchlingmedia.com" class="nav-cta">Contact</a>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-content">
-      <span class="hero-label">Complete IP Portfolio</span>
-      <h1>15 Original Properties. One Creative Studio.</h1>
-      <p>Characters, worlds, and stories developed for animation, licensing, publishing, audio, and digital entertainment — all available for partnership.</p>
-      <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">15</span>
-          <span class="stat-label">IP Properties</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">350K+</span>
-          <span class="stat-label">Words Written</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">8</span>
-          <span class="stat-label">Books Published</span>
-        </div>
-        <div class="stat">
-          <span class="stat-number">156</span>
-          <span class="stat-label">Episodes Scripted</span>
-        </div>
-      </div>
-    </div>
+  <section class="page-header">
+    <h1>IP Portfolio</h1>
+    <p>Published series, completed novels, and television properties. All creator-owned, all adaptation-ready.</p>
   </section>
 
   <main>
 
-    <!-- ==================== CHILDREN'S MEDIA ==================== -->
-    <section class="category">
-      <div class="category-header">
-        <h2>Children's Media</h2>
-        <span class="category-count">4 Properties</span>
+    <!-- ═══════════════════════════ CHILDREN'S ═══════════════════════════ -->
+    <h2 class="category-header">Children&rsquo;s Properties</h2>
+    <p class="category-sub">Published series and properties in development for ages 6&ndash;12.</p>
+
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>Speedeet &amp; Wilar</h3>
+        <span class="status-tag status-published">Published &amp; Available</span>
       </div>
-      <p class="category-desc">Character-driven franchises for kids ages 6–12, developed for animation, publishing, YouTube, and brand licensing.</p>
-
-      <div class="ip-grid">
-
-        <!-- 1. Speedeet & Wilar -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-published">Published &amp; Available</span>
-              <span class="ip-type">Animation / Publishing</span>
-            </div>
-            <h3>Speedeet &amp; Wilar</h3>
-            <p class="ip-logline">"Two best friends tackle everyday fun and cultural adventures with heart, humor, and resilience — from Pike Street, Kitty, Georgetown to the wider Caribbean."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">📚 8 Books Published</span>
-              <span class="ip-tag">🎬 6-Season Animation Bible</span>
-              <span class="ip-tag">📺 156 Episodes Scripted</span>
-              <span class="ip-tag">▶️ YouTube Kids Season</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Franchise Bible</span>
-                <span class="ip-asset">Turnkey Manuscript</span>
-                <span class="ip-asset">Season Roadmap</span>
-                <span class="ip-asset">Pitch Deck</span>
-                <span class="ip-asset">HeyGen Avatars (7)</span>
-                <span class="ip-asset">Character Art</span>
-                <span class="ip-asset">YouTube Scripts</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Ages 7–12 &nbsp;|&nbsp; <strong>Genre:</strong> Adventure / Cultural / Comedy</p>
-          </div>
-        </article>
-
-        <!-- 2. Fix-It Twins -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-complete">Sale-Ready</span>
-              <span class="ip-type">Publishing / Animation</span>
-            </div>
-            <h3>The Fix-It Twins</h3>
-            <p class="ip-logline">"Ten-year-old twins Emma and Jack Henderson discover that fixing things is really about fixing what matters — family, friendship, and community."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">📖 Manuscript Complete</span>
-              <span class="ip-tag">🔧 STEM + Repair Culture</span>
-              <span class="ip-tag">📺 5 Episode Scripts</span>
-              <span class="ip-tag">🎓 STEM Curriculum</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Sale Prospectus</span>
-                <span class="ip-asset">Series Bible</span>
-                <span class="ip-asset">Book 1 Manuscript</span>
-                <span class="ip-asset">Episode Scripts (5)</span>
-                <span class="ip-asset">YouTube Scripts</span>
-                <span class="ip-asset">Neighbor Profiles</span>
-                <span class="ip-asset">STEM Curriculum</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Ages 6–10 &nbsp;|&nbsp; <strong>Genre:</strong> STEM / Family / Community</p>
-          </div>
-        </article>
-
-        <!-- 3. Recipe Rescue Crew -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-development">In Development</span>
-              <span class="ip-type">Animation / Publishing</span>
-            </div>
-            <h3>Recipe Rescue Crew</h3>
-            <p class="ip-logline">"A group of kid cooks race to save family recipes before they're lost forever — learning kitchen science along the way."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🍳 Cooking + Heritage</span>
-              <span class="ip-tag">🧪 Kitchen Science</span>
-              <span class="ip-tag">🌍 Multicultural</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Concept Document</span>
-                <span class="ip-asset">Character Profiles</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Ages 6–10 &nbsp;|&nbsp; <strong>Genre:</strong> Cooking / Heritage / Educational</p>
-          </div>
-        </article>
-
-        <!-- 4. Seed Savers Society -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-development">In Development</span>
-              <span class="ip-type">Animation / Publishing</span>
-            </div>
-            <h3>Seed Savers Society</h3>
-            <p class="ip-logline">"A secret club of young gardeners uncovers mysteries hidden in their town's oldest seeds — and learns why biodiversity matters."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🌱 Environmental Mystery</span>
-              <span class="ip-tag">🔍 Biodiversity</span>
-              <span class="ip-tag">🧑‍🌾 Gardening</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Concept Document</span>
-                <span class="ip-asset">Character Profiles</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Ages 8–12 &nbsp;|&nbsp; <strong>Genre:</strong> Environmental / Mystery / Educational</p>
-          </div>
-        </article>
-
+      <div class="ip-genre">Caribbean Children&rsquo;s Adventure &bull; Ages 7&ndash;12</div>
+      <p class="ip-logline">&ldquo;Two best friends tackle everyday fun and cultural adventures with heart, humor, and resilience.&rdquo;</p>
+      <div class="ip-details">
+        <p><strong>8 books published</strong> on Amazon KDP &mdash; Series 1 (4 books, Pike Street Stories) and Caribbean Adventures (Jamaica, Trinidad, Guyana). Written in authentic Guyanese Creolese. 156-episode animation bible with 6-season arc. YouTube scripts ready for HeyGen avatar pipeline. Character artwork complete.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> Hey Arnold! &times; Caribbean cultural immersion</p>
       </div>
-    </section>
-
-    <!-- ==================== ADULT FICTION ==================== -->
-    <section class="category">
-      <div class="category-header">
-        <h2>Adult Fiction</h2>
-        <span class="category-count">4 Properties</span>
+      <div class="ip-assets">
+        <span class="asset-tag">8 Published Books</span>
+        <span class="asset-tag">156-Episode Animation Bible</span>
+        <span class="asset-tag">Series Bible</span>
+        <span class="asset-tag">Character Artwork</span>
+        <span class="asset-tag">Pitch Deck</span>
+        <span class="asset-tag">YouTube Scripts</span>
       </div>
-      <p class="category-desc">Serialized fiction properties developed as digital-first entertainment with television, film, and podcast adaptation potential.</p>
+    </article>
 
-      <div class="ip-grid">
-
-        <!-- 5. Lighthouse Files -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-locked">Bible-Locked</span>
-              <span class="ip-type">Serial Fiction / TV</span>
-            </div>
-            <h3>The Lighthouse Files</h3>
-            <p class="ip-logline">"A journalist investigating a decommissioned lighthouse uncovers a conspiracy that reaches back decades — and forward into her own family."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">📖 3 Seasons Complete</span>
-              <span class="ip-tag">📝 36 Episodes (~89,700 words)</span>
-              <span class="ip-tag">🔒 Bible-Locked</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">S1 + S2 Omnibuses</span>
-                <span class="ip-asset">Series Bible Lock</span>
-                <span class="ip-asset">3-Season Architecture</span>
-                <span class="ip-asset">S3 Endgame Grid</span>
-                <span class="ip-asset">Production Docs</span>
-                <span class="ip-asset">One-Pager</span>
-                <span class="ip-asset">30-Day Calendar</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 25–54 &nbsp;|&nbsp; <strong>Genre:</strong> Mystery / Thriller / Family Drama</p>
-          </div>
-        </article>
-
-        <!-- 6. Lumen College -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-locked">Bible-Locked</span>
-              <span class="ip-type">Epistolary Fiction / Podcast</span>
-            </div>
-            <h3>Lumen College Correspondence</h3>
-            <p class="ip-logline">"A series of increasingly strange letters between faculty at an elite college reveals an academic conspiracy hiding in plain sight."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">📄 S1 Complete (26 docs, ~25,700 words)</span>
-              <span class="ip-tag">🔒 Bible-Locked</span>
-              <span class="ip-tag">✉️ Epistolary Format</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">S1 Complete</span>
-                <span class="ip-asset">Series Bible Lock</span>
-                <span class="ip-asset">Substack Setup Package</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 25–45 &nbsp;|&nbsp; <strong>Genre:</strong> Academic Mystery / Epistolary</p>
-          </div>
-        </article>
-
-        <!-- 7. Axiom Archive -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-locked">Bible-Locked (V1)</span>
-              <span class="ip-type">Speculative Anthology / TV</span>
-            </div>
-            <h3>Axiom Archive: The Memory Market</h3>
-            <p class="ip-logline">"In a world where one fundamental axiom of reality has changed, a grey-market courier navigates the consequences of memories that can be extracted and traded."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🧠 V1 Architecture Complete</span>
-              <span class="ip-tag">📺 12 Episodes Per Volume</span>
-              <span class="ip-tag">🔒 V1 Bible-Locked</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Operating Thesis</span>
-                <span class="ip-asset">Production Workbook</span>
-                <span class="ip-asset">V1 Production Grid</span>
-                <span class="ip-asset">Bible Lock (V1)</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 18–45 &nbsp;|&nbsp; <strong>Genre:</strong> Speculative Sci-Fi / Anthology</p>
-          </div>
-        </article>
-
-        <!-- 8. The Codex -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-complete">Sale-Ready</span>
-              <span class="ip-type">Interactive Horror / Digital</span>
-            </div>
-            <h3>The Codex (Codicological Society)</h3>
-            <p class="ip-logline">"An interactive intellectual horror experience where readers decode clues embedded in historical manuscripts — and discover they've been recruited into something real."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🕵️ 3-Season Bible</span>
-              <span class="ip-tag">🧩 Interactive (Typeform)</span>
-              <span class="ip-tag">📖 S1 Complete</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Bible Lock</span>
-                <span class="ip-asset">S1 Complete</span>
-                <span class="ip-asset">Pitch Bible</span>
-                <span class="ip-asset">One-Pager</span>
-                <span class="ip-asset">Sample Scripts</span>
-                <span class="ip-asset">Clue Matrix</span>
-                <span class="ip-asset">Viability Assessment</span>
-                <span class="ip-asset">Case File Kit</span>
-                <span class="ip-asset">Launch Guide</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 25–50 &nbsp;|&nbsp; <strong>Genre:</strong> Intellectual Horror / Interactive / ARG</p>
-          </div>
-        </article>
-
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>The Fix-It Twins</h3>
+        <span class="status-tag status-complete">Manuscript Complete</span>
       </div>
-    </section>
-
-    <!-- ==================== AUDIO / MULTIMEDIA ==================== -->
-    <section class="category">
-      <div class="category-header">
-        <h2>Audio &amp; Multimedia</h2>
-        <span class="category-count">1 Property</span>
+      <div class="ip-genre">STEM Children&rsquo;s Series &bull; Ages 6&ndash;10</div>
+      <p class="ip-logline">&ldquo;Ten-year-old twins discover that fixing things is really about fixing what matters &mdash; family, friendship, and community.&rdquo;</p>
+      <div class="ip-details">
+        <p><strong>Book 1 complete</strong> (~29,250 words, 12 chapters). Emma &amp; Jack Henderson, 10-year-old twins in Maplewood, USA. Grandpa Joe&rsquo;s shed is their laboratory. Dual-market property: consumer entertainment + educational licensing. STEM curriculum supplement included.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> Ada Twist, Scientist &times; The Magic School Bus &times; Doc McStuffins</p>
       </div>
-      <p class="category-desc">Audio-first storytelling developed for podcast networks, audio platforms, and film/television adaptation.</p>
-
-      <div class="ip-grid">
-
-        <!-- 9. Memory of Us -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-complete">Sale-Ready</span>
-              <span class="ip-type">Audio Drama / Film</span>
-            </div>
-            <h3>The Memory of Us</h3>
-            <p class="ip-logline">"A deeply personal audio drama exploring how memory, love, and loss shape the stories we tell ourselves — and the ones we can't let go."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🎙️ S1 Complete (12 Episodes)</span>
-              <span class="ip-tag">🔒 Bible-Locked</span>
-              <span class="ip-tag">🎬 Film Adaptation Potential</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">One-Pager</span>
-                <span class="ip-asset">Concept Document</span>
-                <span class="ip-asset">S1 Complete Scripts</span>
-                <span class="ip-asset">Foundation Engine Build</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 25–55 &nbsp;|&nbsp; <strong>Genre:</strong> Drama / Literary / Romance</p>
-          </div>
-        </article>
-
+      <div class="ip-assets">
+        <span class="asset-tag">Book 1 Complete</span>
+        <span class="asset-tag">Series Bible</span>
+        <span class="asset-tag">STEM Curriculum</span>
+        <span class="asset-tag">YouTube Kids Compliant</span>
       </div>
-    </section>
+    </article>
 
-    <!-- ==================== NONFICTION ==================== -->
-    <section class="category">
-      <div class="category-header">
-        <h2>Nonfiction</h2>
-        <span class="category-count">1 Property</span>
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>Recipe Rescue Crew</h3>
+        <span class="status-tag status-dev">In Development</span>
       </div>
-      <p class="category-desc">Authority-driven analytical content developed for publishing, consulting, and educational licensing.</p>
-
-      <div class="ip-grid">
-
-        <!-- 10. NSL -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-locked">Bible-Locked</span>
-              <span class="ip-type">Nonfiction / Consulting</span>
-            </div>
-            <h3>Narrative Systems Lab</h3>
-            <p class="ip-logline">"A casefile-based publication that reverse-engineers how serialized fiction actually works — providing reusable frameworks, production systems, and operational templates."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">📋 12 Casefiles Complete</span>
-              <span class="ip-tag">🔒 Bible-Locked</span>
-              <span class="ip-tag">🛠️ Operational Templates</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">12 Methodology Documents</span>
-                <span class="ip-asset">Production Bible Lock</span>
-                <span class="ip-asset">Workbook</span>
-                <span class="ip-asset">One-Pager</span>
-                <span class="ip-asset">Viability Assessment</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Writers, Showrunners, Content Creators &nbsp;|&nbsp; <strong>Genre:</strong> Nonfiction / Craft / Systems</p>
-          </div>
-        </article>
-
+      <div class="ip-genre">Cooking &amp; Heritage &bull; Ages 6&ndash;10</div>
+      <p class="ip-logline">&ldquo;A group of kid cooks race to save family recipes before they&rsquo;re lost forever &mdash; learning kitchen science along the way.&rdquo;</p>
+      <div class="ip-details">
+        <p>Four diverse kids form a secret mission to preserve family recipes at risk of being forgotten. Each episode blends cooking adventure with cultural storytelling and kitchen science.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> MasterChef Junior format &times; multicultural heritage</p>
       </div>
-    </section>
-
-    <!-- ==================== EMERGING IP ==================== -->
-    <section class="category">
-      <div class="category-header">
-        <h2>Emerging IP</h2>
-        <span class="category-count">5 Properties</span>
+      <div class="ip-assets">
+        <span class="asset-tag">Concept Document</span>
+        <span class="asset-tag">Character Profiles</span>
+        <span class="asset-tag">Season 1 Arc</span>
       </div>
-      <p class="category-desc">New original properties in active development — from concept stage to completed first seasons. Available for co-development and early partnership.</p>
+    </article>
 
-      <div class="ip-grid">
-
-        <!-- 11. Cartography of Absence -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-complete">S1 Complete</span>
-              <span class="ip-type">Audio Drama / Screenplay</span>
-            </div>
-            <h3>Cartography of Absence</h3>
-            <p class="ip-logline">"A philosophical mystery tracing the spaces between what we remember and what actually happened — mapped through the lives of people who've vanished."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🗺️ Philosophical Mystery</span>
-              <span class="ip-tag">📖 S1 Complete</span>
-              <span class="ip-tag">🎬 Pilot Script</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Series Bible</span>
-                <span class="ip-asset">S1 Complete</span>
-                <span class="ip-asset">Pilot Script</span>
-                <span class="ip-asset">One-Pager</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 30–55 &nbsp;|&nbsp; <strong>Genre:</strong> Philosophical Mystery / Drama</p>
-          </div>
-        </article>
-
-        <!-- 12. Dept of Unlikely Solutions -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-complete">S1 Complete</span>
-              <span class="ip-type">Comedy Series / TV</span>
-            </div>
-            <h3>Dept of Unlikely Solutions</h3>
-            <p class="ip-logline">"A forgotten government department staffed by misfits accidentally solves the world's biggest problems — using the worst possible methods."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">😂 British Absurdist Comedy</span>
-              <span class="ip-tag">📖 S1 Arc Complete</span>
-              <span class="ip-tag">🎭 Comedy Engine System</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Concept Document</span>
-                <span class="ip-asset">One-Pager</span>
-                <span class="ip-asset">Comedy Engine Bible</span>
-                <span class="ip-asset">Advanced Engine Layer</span>
-                <span class="ip-asset">S1 Arc</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 18–45 &nbsp;|&nbsp; <strong>Genre:</strong> Absurdist Comedy / Satire</p>
-          </div>
-        </article>
-
-        <!-- 13. Ghosts We Outgrew -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-complete">S1 Complete</span>
-              <span class="ip-type">Thriller / TV</span>
-            </div>
-            <h3>Ghosts We Outgrew</h3>
-            <p class="ip-logline">"The past doesn't stay buried. A psychological thriller about the versions of ourselves we thought we'd left behind — and what happens when they come back."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🧠 Psychological Thriller</span>
-              <span class="ip-tag">📖 S1 Complete</span>
-              <span class="ip-tag">🎬 TV Adaptation Ready</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Concept Document</span>
-                <span class="ip-asset">One-Pager</span>
-                <span class="ip-asset">Bible Foundation</span>
-                <span class="ip-asset">S1 Complete</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 25–50 &nbsp;|&nbsp; <strong>Genre:</strong> Psychological Thriller / Drama</p>
-          </div>
-        </article>
-
-        <!-- 14. Ghost Orchestra -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-concept">Concept Stage</span>
-              <span class="ip-type">Speculative Fiction / Film</span>
-            </div>
-            <h3>Ghost Orchestra</h3>
-            <p class="ip-logline">"Every soul has a musical signature. A speculative journey into a world where the dead can be heard — if you know how to listen."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🎵 Musical + Speculative</span>
-              <span class="ip-tag">📄 12 S1 Episodes Outlined</span>
-              <span class="ip-tag">🌌 Soul Signatures</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Portfolio Cover</span>
-                <span class="ip-asset">Concept Document</span>
-                <span class="ip-asset">One-Pager</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 20–45 &nbsp;|&nbsp; <strong>Genre:</strong> Speculative Fiction / Musical</p>
-          </div>
-        </article>
-
-        <!-- 15. Salt Collector -->
-        <article class="ip-card">
-          <div class="ip-card-top">
-            <div class="ip-card-meta">
-              <span class="ip-badge badge-complete">3-Season Arc</span>
-              <span class="ip-type">Speculative Drama / TV</span>
-            </div>
-            <h3>The Salt Collector</h3>
-            <p class="ip-logline">"An emotional speculative drama about someone who collects the grief of others — and what happens when the weight of all that sorrow becomes their own."</p>
-          </div>
-          <div class="ip-details">
-            <div class="ip-tags">
-              <span class="ip-tag">🧂 Emotional Speculative</span>
-              <span class="ip-tag">📖 3-Season Arc Complete</span>
-              <span class="ip-tag">🎬 TV/Film Ready</span>
-            </div>
-            <div class="ip-assets">
-              <p class="ip-assets-label">Available Assets</p>
-              <div class="ip-asset-list">
-                <span class="ip-asset">Portfolio Cover</span>
-                <span class="ip-asset">Concept Document</span>
-                <span class="ip-asset">One-Pager</span>
-                <span class="ip-asset">3-Season Arc</span>
-              </div>
-            </div>
-            <p class="ip-audience"><strong>Audience:</strong> Adults 25–55 &nbsp;|&nbsp; <strong>Genre:</strong> Speculative Drama / Literary</p>
-          </div>
-        </article>
-
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>Seed Savers Society</h3>
+        <span class="status-tag status-dev">In Development</span>
       </div>
-    </section>
+      <div class="ip-genre">Environmental Mystery &bull; Ages 8&ndash;12</div>
+      <p class="ip-logline">&ldquo;A secret club of young gardeners uncovers mysteries hidden in their town&rsquo;s oldest seeds &mdash; and learns why biodiversity matters before it&rsquo;s too late.&rdquo;</p>
+      <div class="ip-details">
+        <p>Five kids discover a hidden seed vault beneath their community garden and form a secret society to protect rare plant species. Part environmental mystery, part adventure series.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> The Secret Garden &times; National Geographic Kids</p>
+      </div>
+      <div class="ip-assets">
+        <span class="asset-tag">Concept Document</span>
+        <span class="asset-tag">Character Profiles</span>
+        <span class="asset-tag">Episode Structure</span>
+      </div>
+    </article>
 
-    <!-- ==================== CTA ==================== -->
-    <section class="cta-strip">
-      <h2>Interested in Our IP?</h2>
-      <p>We welcome licensing inquiries, co-production partnerships, distribution deals, and development conversations at any stage.</p>
-      <a href="mailto:albert.massay@hatchlingmedia.com?subject=IP%20Portfolio%20Inquiry" class="btn-primary">Partnership Inquiries &rarr;</a>
-    </section>
+    <!-- ═══════════════════════════ ADULT FICTION ═══════════════════════════ -->
+    <h2 class="category-header">Adult Fiction</h2>
+    <p class="category-sub">Completed novels with literary agent submissions active. Speculative and literary fiction with screen adaptation built in.</p>
+
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>The Axiom House Trilogy</h3>
+        <span class="status-tag status-submitted">UK Agent Queries Active</span>
+      </div>
+      <div class="ip-genre">Literary Speculative Fiction &bull; 3 Novels &bull; ~147K words total</div>
+      <p class="ip-logline">&ldquo;Three generations of a family entangled with an algorithmic system that knows too much &mdash; a trilogy about memory, power, and the cost of certainty.&rdquo;</p>
+      <div class="ip-details">
+        <p><strong>Book 1: The Axiom House</strong> (~49K) &bull; <strong>Book 2: The Drift</strong> (~49K) &bull; <strong>Book 3: The Gravity of Us</strong> (~49K). Currently in submission to UK literary agents including Mushens Entertainment, Johnson &amp; Alcock, and Rachel Mills Literary. Positioned as literary fiction with a speculative premise &mdash; not genre sci-fi.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> Kazuo Ishiguro &times; Emily St. John Mandel &times; M. John Harrison</p>
+      </div>
+      <div class="ip-assets">
+        <span class="asset-tag">3 Complete Novels</span>
+        <span class="asset-tag">Synopsis</span>
+        <span class="asset-tag">Query Letters</span>
+        <span class="asset-tag">TV Adaptation Potential</span>
+      </div>
+    </article>
+
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>The Salt Mine</h3>
+        <span class="status-tag status-submitted">Agent Queries Active</span>
+      </div>
+      <div class="ip-genre">Upmarket Speculative Fiction &bull; ~53K words</div>
+      <p class="ip-logline">&ldquo;Four siblings inherit an algorithm that controls the world&rsquo;s water supply &mdash; and seventy-two hours to decide its future.&rdquo;</p>
+      <div class="ip-details">
+        <p>Governance drama with a family dynasty engine. Queries submitted to Curtis Brown, Madeleine Milburn, Darley Anderson, United Agents, and The Agency. Complete TV package with pitch deck, 3-season arc, and episode breakdowns. CAKE Entertainment has acknowledged receipt of the television package.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> Succession &times; Humans &times; Kim Stanley Robinson</p>
+      </div>
+      <div class="ip-assets">
+        <span class="asset-tag">Novel Complete</span>
+        <span class="asset-tag">TV Pitch Deck</span>
+        <span class="asset-tag">Series Bible</span>
+        <span class="asset-tag">3-Season Arc</span>
+        <span class="asset-tag">Full Teleplay</span>
+      </div>
+    </article>
+
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>The Morphology of Desire</h3>
+        <span class="status-tag status-complete">Novel &amp; Teleplay Complete</span>
+      </div>
+      <div class="ip-genre">Prestige Drama &bull; ~51K words &bull; 8-Episode Season</div>
+      <p class="ip-logline">&ldquo;Eight strangers enter a clinical trial for a drug that eliminates desire &mdash; and discover what they lose when wanting disappears.&rdquo;</p>
+      <div class="ip-details">
+        <p>Character-driven ensemble drama. Complete 8-episode teleplay with show bible and character bible. Novel explores the full emotional and philosophical terrain of the premise.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> Black Mirror (single-premise) &times; Station Eleven &times; Nine Perfect Strangers</p>
+      </div>
+      <div class="ip-assets">
+        <span class="asset-tag">Novel Complete</span>
+        <span class="asset-tag">8-Episode Teleplay</span>
+        <span class="asset-tag">Show Bible</span>
+        <span class="asset-tag">Character Bible</span>
+      </div>
+    </article>
+
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>The Anachronism</h3>
+        <span class="status-tag status-complete">Novel &amp; Teleplay Complete</span>
+      </div>
+      <div class="ip-genre">Speculative Drama &bull; ~52K words &bull; 10-Episode Season</div>
+      <p class="ip-logline">&ldquo;A global commission tasked with preserving historical truth discovers that someone is inserting false memories into the collective record.&rdquo;</p>
+      <div class="ip-details">
+        <p>Conspiracy thriller meets institutional drama. Complete 10-episode teleplay with full season arc. Explores truth, memory, and the politics of who controls the past.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> The Bureau &times; Tinker Tailor Soldier Spy &times; Philip K. Dick</p>
+      </div>
+      <div class="ip-assets">
+        <span class="asset-tag">Novel Complete</span>
+        <span class="asset-tag">10-Episode Teleplay</span>
+        <span class="asset-tag">Show Bible</span>
+        <span class="asset-tag">Character Bible</span>
+      </div>
+    </article>
+
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>The Forgetting Curve</h3>
+        <span class="status-tag status-complete">Novel &amp; TV Package Complete</span>
+      </div>
+      <div class="ip-genre">Speculative Fiction &bull; ~51K words</div>
+      <p class="ip-logline">&ldquo;In a society where inconvenient memories can be selectively erased, one archivist discovers the deletions are not random.&rdquo;</p>
+      <div class="ip-details">
+        <p>Memory politics meets institutional thriller. Complete novel with companion TV package including show bible, character bible, and season arc.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> Eternal Sunshine of the Spotless Mind &times; The Remains of the Day</p>
+      </div>
+      <div class="ip-assets">
+        <span class="asset-tag">Novel Complete</span>
+        <span class="asset-tag">TV Package Complete</span>
+        <span class="asset-tag">Show Bible</span>
+      </div>
+    </article>
+
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>The Archive</h3>
+        <span class="status-tag status-complete">Novel &amp; TV Package Complete</span>
+      </div>
+      <div class="ip-genre">Speculative Fiction &bull; ~51K words</div>
+      <p class="ip-logline">&ldquo;A restricted archive holds the records of every decision ever made &mdash; and someone is rewriting them.&rdquo;</p>
+      <div class="ip-details">
+        <p>Institutional conspiracy set in a world where governance depends on perfect records. Novel and complete TV package.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> The Capture &times; Severance</p>
+      </div>
+      <div class="ip-assets">
+        <span class="asset-tag">Novel Complete</span>
+        <span class="asset-tag">TV Package Complete</span>
+        <span class="asset-tag">Show Bible</span>
+      </div>
+    </article>
+
+    <article class="ip-entry">
+      <div class="ip-entry-top">
+        <h3>The Debtors</h3>
+        <span class="status-tag status-complete">Novel &amp; TV Package Complete</span>
+      </div>
+      <div class="ip-genre">Speculative Fiction &bull; ~53K words</div>
+      <p class="ip-logline">&ldquo;In a world where every human obligation is tracked and traded, a family discovers their debts were engineered from birth.&rdquo;</p>
+      <div class="ip-details">
+        <p>Family saga meets economic speculation. Novel and complete TV package with series bible and season arc.</p>
+        <p style="margin-top:8px"><strong>Comps:</strong> Parasite &times; Sorry to Bother You &times; Industry</p>
+      </div>
+      <div class="ip-assets">
+        <span class="asset-tag">Novel Complete</span>
+        <span class="asset-tag">TV Package Complete</span>
+        <span class="asset-tag">Show Bible</span>
+      </div>
+    </article>
+
+    <!-- INQUIRY -->
+    <div style="text-align:center; margin-top:48px; padding-top:40px; border-top:2px solid var(--color-border);">
+      <p style="color:var(--color-text-secondary); font-size:0.95rem; margin-bottom:16px;">Interested in any of these properties? Request pitch materials, synopses, or sample chapters.</p>
+      <a href="mailto:albert.massay@hatchlingmedia.com?subject=Portfolio%20Inquiry" class="btn-primary" style="display:inline-block; background:var(--color-accent); color:#fff; padding:12px 28px; border-radius:6px; font-size:0.9rem; text-decoration:none;">Request Materials</a>
+    </div>
 
   </main>
 
   <footer>
     <div class="footer-inner">
       <div class="footer-brand">
-        <img src="Hatchling_Media.png" alt="Hatchling Media" />
+        <img src="Hatchling_Media.png" alt="Hatchling Media">
         <span>Hatchling Media</span>
       </div>
       <nav class="footer-nav" aria-label="Footer navigation">
@@ -971,11 +343,8 @@
         <a href="studio.html">Studio</a>
         <a href="mailto:albert.massay@hatchlingmedia.com">Contact</a>
       </nav>
-      <div class="footer-legal">
-        &copy; 2026 Hatchling Media. All original characters and concepts are intellectual property of Hatchling Media.
-      </div>
+      <div class="footer-legal">&copy; 2026 Hatchling Media. All original characters and concepts are intellectual property of Hatchling Media.</div>
     </div>
   </footer>
-
 </body>
 </html>

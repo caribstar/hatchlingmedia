@@ -1,150 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Development Slate | Hatchling Media</title>
-  <meta name="description" content="Hatchling Media's development slate — projects currently in active development signaling future studio output and partnership opportunities." />
+  <meta name="description" content="Current development activity: agent submissions, production company outreach, self-publishing pipeline, and new IP in development.">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
-
   <style>
     :root {
-      --color-ink: #1a1a2e; --color-ink-light: #3a3a5c; --color-ink-muted: #6e6e8a;
-      --color-paper: #ffffff; --color-paper-warm: #fafaf8; --color-paper-soft: #f4f3f0;
-      --color-accent: #2563eb; --color-accent-dark: #1d4ed8; --color-accent-light: #dbeafe;
-      --color-gold: #d4a017; --color-gold-light: #fef3c7; --color-border: #e5e5e0;
-      --font-display: 'Playfair Display', Georgia, serif;
-      --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --color-bg: #FAFAF8;
+      --color-text: #1A1A1A;
+      --color-text-secondary: #555;
+      --color-accent: #2A6B4A;
+      --color-accent-light: #E8F3ED;
+      --color-accent-dark: #1E5438;
+      --color-border: #E0E0D8;
+      --color-card: #FFFFFF;
+      --font-heading: 'Georgia', serif;
+      --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: var(--font-body); background: var(--color-paper); color: var(--color-ink); line-height: 1.7; min-height: 100vh; display: flex; flex-direction: column; }
+    body { font-family: var(--font-body); background: var(--color-bg); color: var(--color-text); line-height: 1.7; }
+    a { color: var(--color-accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
 
-    header { padding: 18px 48px; display: flex; justify-content: space-between; align-items: center; background: var(--color-paper); border-bottom: 1px solid var(--color-border); position: sticky; top: 0; z-index: 100; }
-    .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
-    .logo img { height: 156px; width: auto; }
-    .logo-text { font-family: var(--font-display); font-weight: 700; font-size: 1.25rem; color: var(--color-ink); }
-    nav { display: flex; align-items: center; gap: 32px; }
-    nav a { text-decoration: none; color: var(--color-ink-light); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    header { display: flex; align-items: center; justify-content: space-between; padding: 20px 48px; border-bottom: 1px solid var(--color-border); background: #fff; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--color-text); }
+    .logo img { height: 48px; }
+    .logo-text { font-family: var(--font-heading); font-size: 1.1rem; font-weight: 600; }
+    nav { display: flex; gap: 28px; align-items: center; }
+    nav a { font-size: 0.9rem; color: var(--color-text-secondary); text-decoration: none; }
     nav a:hover, nav a.active { color: var(--color-accent); }
-    nav .nav-cta { background: var(--color-accent); color: #fff; padding: 10px 24px; border-radius: 8px; font-weight: 600; transition: background 0.2s; }
-    nav .nav-cta:hover { background: var(--color-accent-dark); color: #fff; }
-    .mobile-menu { display: none; background: none; border: none; font-size: 1.6rem; cursor: pointer; color: var(--color-ink); }
+    .nav-cta { background: var(--color-accent); color: #fff !important; padding: 8px 20px; border-radius: 6px; font-size: 0.85rem; }
+    .nav-cta:hover { background: var(--color-accent-dark); text-decoration: none; }
+    .mobile-menu { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
 
-    .page-hero { padding: 80px 48px 48px; text-align: center; border-bottom: 1px solid var(--color-border); background: var(--color-paper-soft); }
-    .page-hero h1 { font-family: var(--font-display); font-size: 2.8rem; font-weight: 800; margin-bottom: 16px; }
-    .page-hero p { font-size: 1.1rem; color: var(--color-ink-light); max-width: 620px; margin: 0 auto; }
+    .page-header { text-align: center; padding: 72px 48px 48px; }
+    .page-header h1 { font-family: var(--font-heading); font-size: 2.4rem; margin-bottom: 12px; }
+    .page-header p { color: var(--color-text-secondary); font-size: 1.05rem; max-width: 640px; margin: 0 auto; }
 
-    .slate-list { max-width: 900px; margin: 0 auto; padding: 60px 48px; }
+    main { max-width: 960px; margin: 0 auto; padding: 0 32px 80px; }
 
-    .slate-entry {
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 40px;
-      border: 1px solid var(--color-border);
-      border-radius: 16px;
-      padding: 36px;
-      margin-bottom: 36px;
-      background: var(--color-paper);
-      transition: box-shadow 0.3s;
-    }
-    .slate-entry:hover { box-shadow: 0 6px 32px rgba(0,0,0,0.06); }
+    .track { margin-bottom: 48px; }
+    .track-header { font-family: var(--font-heading); font-size: 1.4rem; margin-bottom: 8px; padding-bottom: 8px; border-bottom: 2px solid var(--color-accent-light); }
+    .track-desc { color: var(--color-text-secondary); font-size: 0.92rem; margin-bottom: 24px; }
 
-    .slate-main h2 { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; margin-bottom: 4px; }
+    .slate-card { background: var(--color-card); border: 1px solid var(--color-border); border-radius: 10px; padding: 28px; margin-bottom: 16px; }
+    .slate-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; flex-wrap: wrap; gap: 8px; }
+    .slate-card h3 { font-family: var(--font-heading); font-size: 1.05rem; }
+    .stage-tag { font-size: 0.72rem; font-weight: 600; padding: 3px 12px; border-radius: 12px; white-space: nowrap; }
+    .stage-active { background: #FFF3CD; color: #856404; }
+    .stage-ready { background: #D1ECF1; color: #0C5460; }
+    .stage-pipeline { background: #E8F3ED; color: #2A6B4A; }
+    .stage-response { background: #D4EDDA; color: #155724; }
+    .slate-card p { color: var(--color-text-secondary); font-size: 0.9rem; }
+    .slate-card .target { font-size: 0.82rem; color: var(--color-text-secondary); margin-top: 10px; }
+    .slate-card .target strong { color: var(--color-text); }
 
-    .stage-badge {
-      display: inline-block;
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 16px;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin-bottom: 16px;
-    }
-    .stage-pilot { background: #dbeafe; color: #1d4ed8; }
-    .stage-bible { background: #fef3c7; color: #92400e; }
-    .stage-concept { background: #f3e8ff; color: #7c3aed; }
-    .stage-production { background: #dcfce7; color: #166534; }
+    .note-box { background: var(--color-accent-light); border-radius: 10px; padding: 28px; margin-top: 48px; }
+    .note-box h3 { font-family: var(--font-heading); font-size: 1.1rem; color: var(--color-accent); margin-bottom: 8px; }
+    .note-box p { color: var(--color-text-secondary); font-size: 0.92rem; }
 
-    .slate-summary {
-      font-size: 0.98rem;
-      color: var(--color-ink-light);
-      line-height: 1.75;
-      margin-bottom: 16px;
-    }
+    .btn-primary { display: inline-block; background: var(--color-accent); color: #fff; padding: 12px 28px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; text-decoration: none; }
+    .btn-primary:hover { background: var(--color-accent-dark); text-decoration: none; }
 
-    .slate-sidebar {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .sidebar-block {
-      background: var(--color-paper-soft);
-      border-radius: 10px;
-      padding: 16px;
-    }
-
-    .sidebar-label {
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--color-ink-muted);
-      margin-bottom: 6px;
-    }
-
-    .sidebar-value {
-      font-size: 0.9rem;
-      color: var(--color-ink-light);
-      line-height: 1.5;
-    }
-
-    .pipeline-note {
-      text-align: center;
-      padding: 48px;
-      color: var(--color-ink-muted);
-      font-style: italic;
-    }
-
-    .cta-strip {
-      text-align: center;
-      padding: 64px 48px;
-      background: var(--color-paper-soft);
-      border-top: 1px solid var(--color-border);
-    }
-    .cta-strip h2 { font-family: var(--font-display); font-size: 1.8rem; margin-bottom: 16px; }
-    .cta-strip p { color: var(--color-ink-light); max-width: 520px; margin: 0 auto 24px; }
-    .btn-primary { display: inline-block; background: var(--color-accent); color: #fff; padding: 14px 32px; border-radius: 8px; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.15s; }
-    .btn-primary:hover { background: var(--color-accent-dark); transform: translateY(-1px); }
-
-    footer { background: var(--color-ink); color: #ccc; padding: 40px 48px; margin-top: auto; }
-    .footer-inner { max-width: 1000px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+    footer { border-top: 1px solid var(--color-border); background: #fff; padding: 40px 48px; }
+    .footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
     .footer-brand { display: flex; align-items: center; gap: 10px; }
-    .footer-brand img { height: 96px; filter: brightness(10); }
-    .footer-brand span { font-weight: 600; color: #fff; }
+    .footer-brand img { height: 32px; }
+    .footer-brand span { font-family: var(--font-heading); font-size: 0.95rem; font-weight: 600; }
     .footer-nav { display: flex; gap: 24px; }
-    .footer-nav a { color: #aaa; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
-    .footer-nav a:hover { color: #fff; }
-    .footer-legal { width: 100%; text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid #333; font-size: 0.82rem; color: #777; }
+    .footer-nav a { font-size: 0.85rem; color: var(--color-text-secondary); text-decoration: none; }
+    .footer-nav a:hover { color: var(--color-accent); }
+    .footer-legal { font-size: 0.8rem; color: #999; }
 
     @media (max-width: 768px) {
-      header { padding: 14px 20px; }
+      header { padding: 16px 20px; }
       .mobile-menu { display: block; }
-      nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--color-paper); flex-direction: column; padding: 20px; gap: 16px; border-bottom: 1px solid var(--color-border); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+      nav { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: #fff; padding: 20px; border-bottom: 1px solid var(--color-border); gap: 16px; }
       nav.open { display: flex; }
-      .page-hero { padding: 48px 20px 32px; }
-      .page-hero h1 { font-size: 2rem; }
-      .slate-list { padding: 32px 20px; }
-      .slate-entry { grid-template-columns: 1fr; padding: 24px; }
-      .cta-strip { padding: 40px 20px; }
+      .page-header { padding: 48px 20px 32px; }
+      .page-header h1 { font-size: 1.8rem; }
+      main { padding: 0 20px 60px; }
       footer { padding: 32px 20px; }
-      .footer-inner { flex-direction: column; text-align: center; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 16px; }
       .footer-nav { flex-wrap: wrap; justify-content: center; }
     }
   </style>
@@ -165,113 +105,130 @@
     </nav>
   </header>
 
-  <section class="page-hero">
+  <section class="page-header">
     <h1>Development Slate</h1>
-    <p>Projects currently in active development &mdash; signaling future studio output and partnership opportunities.</p>
+    <p>Current activity across literary agent submissions, production company outreach, publishing, and new IP development.</p>
   </section>
 
-  <div class="slate-list">
+  <main>
 
-    <!-- THE FIX-IT TWINS -->
-    <article class="slate-entry">
-      <div class="slate-main">
-        <h2>The Fix-It Twins</h2>
-        <span class="stage-badge stage-pilot">Pilot Ready</span>
-        <p class="slate-summary">Emma and Jack Henderson &mdash; ten-year-old twins &mdash; learn that fixing broken things is really about fixing what matters: family, friendship, and community. Set in Maplewood, USA with STEM-focused storytelling. Complete manuscript, series bible, 5 episode scripts, and YouTube production scripts ready. Fully YouTube Kids and Amazon Kids compliant.</p>
-      </div>
-      <div class="slate-sidebar">
-        <div class="sidebar-block">
-          <div class="sidebar-label">Target Audience</div>
-          <div class="sidebar-value">Ages 6&ndash;10<br>YouTube Kids &middot; Amazon Kids<br>Streaming &middot; Animation</div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Stage</div>
-          <div class="sidebar-value">Manuscript complete<br>Bible &amp; scripts ready<br>Seeking animation partner</div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Partnership Sought</div>
-          <div class="sidebar-value">Animation co-production<br>Streaming distribution<br>STEM brand partnership</div>
-        </div>
-      </div>
-    </article>
+    <!-- TRACK 1: LITERARY AGENT SUBMISSIONS -->
+    <div class="track">
+      <h2 class="track-header">Literary Agent Submissions</h2>
+      <p class="track-desc">Completed novels in active submission to UK and US literary agencies for traditional publishing deals.</p>
 
-    <!-- RECIPE RESCUE CREW -->
-    <article class="slate-entry">
-      <div class="slate-main">
-        <h2>Recipe Rescue Crew</h2>
-        <span class="stage-badge stage-bible">Bible Stage</span>
-        <p class="slate-summary">A group of kid cooks race against time to save family recipes before they disappear forever &mdash; learning kitchen science, cultural heritage, and teamwork along the way. Combining cooking competition energy with intergenerational storytelling, this series creates natural touchpoints for food brands, educational platforms, and cultural organizations.</p>
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>The Axiom House Trilogy</h3>
+          <span class="stage-tag stage-active">Queries Active</span>
+        </div>
+        <p>Literary speculative trilogy (~147K words). Targeting UK agents with strong literary fiction lists and film/TV sub-rights capability. Positioned as literary fiction with a speculative premise.</p>
+        <div class="target"><strong>Target agents:</strong> Mushens Entertainment, Johnson &amp; Alcock (Ed Wilson), Rachel Mills Literary (Nelle Andrew), RCW (Sam Copeland)</div>
       </div>
-      <div class="slate-sidebar">
-        <div class="sidebar-block">
-          <div class="sidebar-label">Target Audience</div>
-          <div class="sidebar-value">Ages 6&ndash;10<br>Streaming &middot; YouTube<br>Educational platforms</div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Stage</div>
-          <div class="sidebar-value">Concept &amp; world-building<br>Character development<br>Pilot outline in progress</div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Partnership Sought</div>
-          <div class="sidebar-value">Co-development financing<br>Food brand collaboration<br>Educational licensing</div>
-        </div>
-      </div>
-    </article>
 
-    <!-- SEED SAVERS SOCIETY -->
-    <article class="slate-entry">
-      <div class="slate-main">
-        <h2>Seed Savers Society</h2>
-        <span class="stage-badge stage-concept">Concept Stage</span>
-        <p class="slate-summary">A secret club of young gardeners discovers that their town's oldest seeds hold extraordinary mysteries &mdash; and that biodiversity is worth fighting for. Environmental mystery meets adventure storytelling, positioned for the growing demand in sustainability-focused children's content. Natural alignment with conservation organizations and environmental education initiatives.</p>
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>The Salt Mine</h3>
+          <span class="stage-tag stage-active">Queries Active</span>
+        </div>
+        <p>Upmarket speculative novel (~53K words). Family governance drama with built-in TV adaptation. Queries submitted to major UK agencies with integrated literary and screen rights representation.</p>
+        <div class="target"><strong>Target agents:</strong> Curtis Brown, Madeleine Milburn (Olivia Maidment), Darley Anderson, United Agents, The Agency</div>
       </div>
-      <div class="slate-sidebar">
-        <div class="sidebar-block">
-          <div class="sidebar-label">Target Audience</div>
-          <div class="sidebar-value">Ages 8&ndash;12<br>Streaming &middot; Educational<br>Global markets</div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Stage</div>
-          <div class="sidebar-value">Concept development<br>World-building<br>Episode arc planning</div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Partnership Sought</div>
-          <div class="sidebar-value">Environmental org partnership<br>Co-development financing<br>Green brand collaboration</div>
-        </div>
-      </div>
-    </article>
+    </div>
 
-    <!-- SPEEDEET & WILAR EXPANSION -->
-    <article class="slate-entry">
-      <div class="slate-main">
-        <h2>Speedeet &amp; Wilar: Animated Series</h2>
-        <span class="stage-badge stage-production">Active Development</span>
-        <p class="slate-summary">Expanding the published Speedeet &amp; Wilar book franchise into an animated series for YouTube and streaming platforms. AI-generated character avatars already produced via HeyGen with supporting cast (Ma, Aunty Devi, Lil Suzie, Old Man Doodnauth, Miss Persaud). Pilot production underway using talking avatar technology with plans for traditional animation upgrade upon partner acquisition.</p>
-      </div>
-      <div class="slate-sidebar">
-        <div class="sidebar-block">
-          <div class="sidebar-label">Target Audience</div>
-          <div class="sidebar-value">Ages 7&ndash;12<br>YouTube Kids &middot; Streaming<br>Caribbean &amp; Global</div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Stage</div>
-          <div class="sidebar-value">Pilot production active<br>HeyGen avatar pipeline<br>Seeking animation upgrade</div>
-        </div>
-        <div class="sidebar-block">
-          <div class="sidebar-label">Partnership Sought</div>
-          <div class="sidebar-value">Animation studio partner<br>Streaming distribution<br>Caribbean media partner</div>
-        </div>
-      </div>
-    </article>
+    <!-- TRACK 2: TV / PRODUCTION COMPANY OUTREACH -->
+    <div class="track">
+      <h2 class="track-header">Television &amp; Production Company Outreach</h2>
+      <p class="track-desc">Complete TV packages with show bibles, character bibles, and full-season teleplays submitted to UK production companies.</p>
 
-    <p class="pipeline-note">Additional concepts in early ideation. The studio maintains a rolling pipeline of original IP in various stages of development.</p>
-  </div>
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>The Salt Mine &mdash; TV Package</h3>
+          <span class="stage-tag stage-response">Response Received</span>
+        </div>
+        <p>6 &times; 60&rsquo; returnable drama series. Pitch deck, 3-season arc, episode breakdowns, and series bible submitted. CAKE Entertainment has acknowledged receipt and confirmed they will review the proposal.</p>
+        <div class="target"><strong>Additional targets:</strong> Mammoth Screen, Sister Pictures, Channel 4, Red Production Company</div>
+      </div>
 
-  <section class="cta-strip">
-    <h2>Collaborate on Development</h2>
-    <p>We welcome co-production, financing, and development partners for projects at any stage.</p>
-    <a href="mailto:albert.massay@hatchlingmedia.com?subject=Development%20Partnership%20Inquiry" class="btn-primary">Development Inquiries &rarr;</a>
-  </section>
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>The Morphology of Desire</h3>
+          <span class="stage-tag stage-ready">Package Ready</span>
+        </div>
+        <p>8-episode prestige drama. Complete show bible, character bible, and full 8-episode teleplay. Clinical trial premise with ensemble cast. Ready for production company submission.</p>
+        <div class="target"><strong>Format:</strong> 8 &times; 60&rsquo; limited series</div>
+      </div>
+
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>The Anachronism</h3>
+          <span class="stage-tag stage-ready">Package Ready</span>
+        </div>
+        <p>10-episode speculative drama. Complete show bible, character bible, and full 10-episode teleplay. Historical truth commission premise. Ready for production company submission.</p>
+        <div class="target"><strong>Format:</strong> 10 &times; 60&rsquo; limited series</div>
+      </div>
+
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>Additional TV Properties</h3>
+          <span class="stage-tag stage-ready">Packages Ready</span>
+        </div>
+        <p>Complete TV packages also built for The Forgetting Curve, The Archive, The Debtors, and Viable System. Each includes show bible, character bible, and season arc. All available for production company submission.</p>
+      </div>
+    </div>
+
+    <!-- TRACK 3: PUBLISHING PIPELINE -->
+    <div class="track">
+      <h2 class="track-header">Publishing Pipeline</h2>
+      <p class="track-desc">Self-published series and upcoming releases.</p>
+
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>Speedeet &amp; Wilar Series</h3>
+          <span class="stage-tag stage-response">8 Books Live</span>
+        </div>
+        <p>Currently published on Amazon KDP. Series 1 (4 books) and Caribbean Adventures (Jamaica, Trinidad, Guyana). Additional Caribbean Adventures volumes planned. Animation bible and YouTube content pipeline in parallel development.</p>
+      </div>
+
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>Adult Fiction &mdash; KDP Self-Publishing</h3>
+          <span class="stage-tag stage-pipeline">Pipeline</span>
+        </div>
+        <p>Select completed novels earmarked for self-publishing on Amazon KDP with AI-assisted audiobook production. Planned release sequence at 4&ndash;6 week intervals. Properties not currently in agent submission will be released independently to generate revenue while the agent track develops.</p>
+      </div>
+    </div>
+
+    <!-- TRACK 4: CHILDREN'S IP IN DEVELOPMENT -->
+    <div class="track">
+      <h2 class="track-header">Children&rsquo;s IP in Development</h2>
+      <p class="track-desc">New properties being developed for publishing, animation, and educational licensing.</p>
+
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>The Fix-It Twins</h3>
+          <span class="stage-tag stage-ready">Book 1 Complete</span>
+        </div>
+        <p>STEM children&rsquo;s property. Book 1 manuscript complete (~29,250 words). Series bible and curriculum supplement built. Targeting educational publishers, YouTube Kids, and PBS Kids-style partners.</p>
+      </div>
+
+      <div class="slate-card">
+        <div class="slate-card-top">
+          <h3>Recipe Rescue Crew &amp; Seed Savers Society</h3>
+          <span class="stage-tag stage-pipeline">Concept Stage</span>
+        </div>
+        <p>Two additional children&rsquo;s properties with complete concept documents, character profiles, and season arcs. Ready for co-development partnerships with children&rsquo;s media studios.</p>
+      </div>
+    </div>
+
+    <!-- NOTE -->
+    <div class="note-box">
+      <h3>Partnership Opportunities</h3>
+      <p>We welcome conversations with literary agents, publishers, production companies, and children&rsquo;s media studios. Pitch materials, synopses, sample chapters, and TV packages are available on request for any property in the portfolio.</p>
+      <p style="margin-top:16px;"><a href="mailto:albert.massay@hatchlingmedia.com?subject=Development%20Slate%20Inquiry" class="btn-primary" style="display:inline-block; background:var(--color-accent); color:#fff; padding:12px 28px; border-radius:6px; font-size:0.9rem; text-decoration:none;">Request Materials</a></p>
+    </div>
+
+  </main>
 
   <footer>
     <div class="footer-inner">
@@ -286,9 +243,7 @@
         <a href="studio.html">Studio</a>
         <a href="mailto:albert.massay@hatchlingmedia.com">Contact</a>
       </nav>
-      <div class="footer-legal">
-        &copy; 2026 Hatchling Media. All original characters and concepts are intellectual property of Hatchling Media.
-      </div>
+      <div class="footer-legal">&copy; 2026 Hatchling Media. All original characters and concepts are intellectual property of Hatchling Media.</div>
     </div>
   </footer>
 </body>
